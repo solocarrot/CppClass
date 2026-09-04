@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/솔루션 항목/">
-    <File Path="project.cpp" />
-  </Folder>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Project4/Project4.vcxproj" />
 </Solution>
