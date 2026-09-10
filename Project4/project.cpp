@@ -83,17 +83,18 @@ int main() {
 	int lineForNum = 4;
 	int nowNum = 1;
 
-	for (int p = 0; p < n / lineForNum; p++) {
+	for (int p = 0; p < (n / lineForNum) ; p++) {
 		for (int i = 1; i <= 7; i++) {
-			std::cout << nowNum << "*" << i << std::endl;
+			std::cout << nowNum << " * " << i << " = " << nowNum * i;
 			nowNum++;
 			for (int j = 0; j < lineForNum - 1; j++) {
-				std::cout << " " << std::endl;
-				std::cout << nowNum << "*" << i << "=" << nowNum * i;
+				std::cout << " ";
+				std::cout << nowNum << " * " << i << " = " << nowNum * i;
 				nowNum++;
 				}
-			}
 			std::cout << std::endl;
+			nowNum -= (lineForNum - 1);
+			}
 		}
 		std::cout << std::endl;
 		return 0;
