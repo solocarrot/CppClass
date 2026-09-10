@@ -45,25 +45,70 @@
 //	}
 //}
 
-// 4.구구단
+//// 4.구구단
+//
+//#include <iostream>
+//
+//int main() {
+//
+//	int n = 11;
+//	int lineForNum = 4;
+//
+//	for (int p = 0; p < n; p += lineForNum) {
+//		for (int i = 1; i <= 7; i++) {
+//			for (int j = p + 1; j <= p + 1 + lineForNum; j++) {
+//				std::cout << j << "*" << i << "=" << j * i;
+//				for (int k = 0; k < 3; k++) {
+//					std::cout << " ";
+//				}
+//			}
+//			std::cout << std::endl;
+//	}
+//	}
+//	return 0;
+//}
+
+// 5. 완전수와 소수출력
 
 #include <iostream>
 
 int main() {
+	using namespace std;
+	int x;
+	int numberElement = 1;
+	bool isDecimal = true;
+	bool isComplete = false;
 
-	int n = 11;
-	int lineForNum = 4;
+	std::cin >> x;
 
-	for (int p = 0; p < n; p += lineForNum) {
-		for (int i = 1; i <= 7; i++) {
-			for (int j = p + 1; j <= p + 1 + lineForNum; j++) {
-				std::cout << j << "*" << i << "=" << j * i;
-				for (int k = 0; k < 3; k++) {
-					std::cout << " ";
+	for (int i = 2; i <= x; i++) {
+		for (int j = 2; j <= i / 2; j++) {
+			while (isDecimal == true) {
+				if (i % j == 0 && i / j > 1) {
+					isDecimal = false;
 				}
 			}
-			std::cout << std::endl;
+			if (isDecimal == false) {
+				//소수가 아닌 수들에 대해서 완전수인지에 대한 검사를 진행
+				for (int k = 2; k <= j / 2; k++) {
+					if (j % k == 0 && k * k != j) {
+						numberElement += k;
+						numberElement += j / k;
+					}
+				}
+		}
+			}
 	}
+
+	for (int i = 2; i <= x; i++) {
+
 	}
+	
+
+
+
+
+
+
 	return 0;
 }
