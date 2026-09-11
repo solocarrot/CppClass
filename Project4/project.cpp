@@ -93,8 +93,10 @@ int main() {
 				nowNum++;
 				}
 			std::cout << std::endl;
-			nowNum -= (lineForNum - 1);
+			nowNum -= lineForNum;
 			}
+		nowNum += lineForNum;
+		std::cout << std::endl;
 		}
 		std::cout << std::endl;
 		return 0;
