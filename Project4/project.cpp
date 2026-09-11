@@ -124,52 +124,82 @@
 //	}
 //		return 0;
 //}
+//
+//// 5. 완전수와 소수출력
+//
+//#include <iostream>
+//
+//int main() {
+//	using namespace std;
+//	int num;
+//	int nowNum = 11;
+//	bool isDecimal = true;
+//	bool isComplete = false;
+//
+//	std::cin >> num;
+//
+//	if (num < 5) {
+//
+//	}
+//	else if (num > 5 && num < 10) {
+//
+//	}
+//	else {
+//
+//	}
+//
+//	for (int i = nowNum; i <= num; i++) {
+//		while (isDecimal == true) {
+//			for (int j = 2; j < i / 2; j++) {
+//				if (i % j == 0) {
+//					isDecimal = false;
+//				}
+//			}
+//			if (isDecimal == false) {
+//				//소수가 아닌 수들에 대해서 완전수인지에 대한 검사를 진행
+//				//소인수를 모두 구해서 더하는 코드
+//				for (int k = 2; k <= j / 2; k++) {
+//					if (j % k == 0 && k * k != j) {
+//						numberElement += k;
+//						numberElement += j / k;
+//					}
+//				}
+//				cout << endl;
+//				cout << "[C]" << 
+//		}
+//			else {
+//				cout << 
+//			}
+//			}
+//	}
+//
+//	for (int i = 2; i <= x; i++) {
+//
+//	}
+//	
+//	return 0;
+//}
 
-// 5. 완전수와 소수출력
-
+//완전수 구하는식
 #include <iostream>
 
 int main() {
-	using namespace std;
-	int num;
-	int nowNum = 11;
-	bool isDecimal = true;
-	bool isComplete = false;
-
-	std::cin >> num;
-
-	if (num < 5) {
-
-	}
-	else if (num > 5 && num < 10) {
-
-	}
-	else {
-
-	}
-
-	for (int i = nowNum; i <= num; i++) {
-		for (int j = 2; j <= i / 2; j++) {
-			while (isDecimal == true) {
-				if (i % j == 0) {
-					isDecimal = false;
-				}
-			}
-			if (isDecimal == false) {
-				//소수가 아닌 수들에 대해서 완전수인지에 대한 검사를 진행
-				for (int k = 2; k <= j / 2; k++) {
-					if (j % k == 0 && k * k != j) {
-						numberElement += k;
-						numberElement += j / k;
-					}
-				}
-		}
-			}
-	}
-
-	for (int i = 2; i <= x; i++) {
-
-	}
+	int n;
+	std:cin >> n;
 	
-	return 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
