@@ -19,89 +19,111 @@
 //
 //	cout << showbase << oct << num << endl;
 //	cout << showbase << hex << num << endl;
-//
 //}
 //
 ////3. 별찍기.
 //
-//#include <iostream>
-//
-//int main() {
-//	int num = 3;
-//	int space = num - 1;
-//	int variableStar = num;
-//
-//	for (int i = space; i <= 0; i--) {
-//		std::cout << " " * i << "*" * variableStar << std::endl;
-//		variableStar = variableStar + 2;
-//		if (i == 0) {
-//			for (int j = 0; j < num; j++) {
-//				std::cout << "*" * variableStar << std::endl;
-//			}
-//		}
-//		for (int j = 1; j < num; j++) {
-//			space = j;
-//		}
-//	}
-//
-//
-//}
-
-
-//구구단
-
-////3. 별찍기.
-//
-//#include <iostream>
-//
-//int main() {
-//	int num = 3;
-//	int space = num - 1;
-//	int variableStar = num;
-//
-//	for (int i = space; i <= 0; i--) {
-//		std::cout << " " * i << "*" * variableStar << std::endl;
-//		variableStar = variableStar + 2;
-//		if (i == 0) {
-//			for (int j = 0; j < num; j++) {
-//				std::cout << "*" * variableStar << std::endl;
-//			}
-//		}
-//		for (int j = 1; j < num; j++) {
-//			space = j;
-//		}
-//	}
-//}
-
-// 4.구구단
-
 #include <iostream>
 
 int main() {
 
-	int n = 11;
-	int lineForNum = 4;
-	int nowNum = 1;
+	int cnt;
+	std::cin >> cnt;
 
-	for (int p = 0; p <= (n / lineForNum) ; p++) {
-			for (int i = 1; i <= 7; i++) {
-				if (nowNum <= n) {
-					std::cout << nowNum << " * " << i << " = " << nowNum * i;
-					nowNum++;
-					for (int j = 0; j < lineForNum - 1; j++) {
-						std::cout << " ";
-						std::cout << nowNum << " * " << i << " = " << nowNum * i;
-						nowNum++;
-					}
-					std::cout << std::endl;
-					nowNum -= lineForNum;
-				}
+	for (int k = 0; k < cnt; k++) {
+		int n;
+		std::cin >> n;
+		int blank = n - 1;
+		int star = ((n * 3) - 2) - (2 * blank);
+
+
+
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = 0; j < blank; j++) {
+				std::cout << " ";
 			}
-			nowNum += lineForNum;
+			for (int j = 0; j < star; j++) {
+				std::cout << "*";
+			}
 			std::cout << std::endl;
+			blank--;
+			star += 2;
+		}
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < star; j++) {
+				std::cout << "*";
+			}
+			std::cout << std::endl;
+		}
+
+		for (int i = 0; i < n - 1; i++) {
+			blank++;
+			star -= 2;
+			for (int j = 0; j < blank; j++) {
+				std::cout << " ";
+			}
+			for (int j = 0; j < star; j++) {
+				std::cout << "*";
+			}
+			std::cout << std::endl;
+		}
 	}
-		return 0;
 }
+
+
+////3. 별찍기.
+//
+//#include <iostream>
+//
+//int main() {
+//	int num = 3;
+//	int space = num - 1;
+//	int variableStar = num;
+//
+//	for (int i = space; i <= 0; i--) {
+//		std::cout << " " * i << "*" * variableStar << std::endl;
+//		variableStar = variableStar + 2;
+//		if (i == 0) {
+//			for (int j = 0; j < num; j++) {
+//				std::cout << "*" * variableStar << std::endl;
+//			}
+//		}
+//		for (int j = 1; j < num; j++) {
+//			space = j;
+//		}
+//	}
+//}
+
+//// 4.구구단
+//
+//#include <iostream>
+//
+//int main() {
+//
+//	int n = 11;
+//	int lineForNum = 4;
+//	int nowNum = 1;
+//
+//	for (int p = 0; p <= (n / lineForNum) ; p++) {
+//			for (int i = 1; i <= 7; i++) {
+//				if (nowNum <= n) {
+//					std::cout << nowNum << " * " << i << " = " << nowNum * i;
+//					nowNum++;
+//					for (int j = 0; j < lineForNum - 1; j++) {
+//						std::cout << " ";
+//						std::cout << nowNum << " * " << i << " = " << nowNum * i;
+//						nowNum++;
+//					}
+//					std::cout << std::endl;
+//					nowNum -= lineForNum;
+//				}
+//			}
+//			nowNum += lineForNum;
+//			std::cout << std::endl;
+//	}
+//		return 0;
+//}
 
 // 5. 완전수와 소수출력
 
