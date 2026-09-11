@@ -23,53 +23,53 @@
 //
 ////3. 별찍기.
 //
-#include <iostream>
-
-int main() {
-
-	int cnt;
-	std::cin >> cnt;
-
-	for (int k = 0; k < cnt; k++) {
-		int n;
-		std::cin >> n;
-		int blank = n - 1;
-		int star = ((n * 3) - 2) - (2 * blank);
-
-
-
-		for (int i = 0; i < n - 1; i++) {
-			for (int j = 0; j < blank; j++) {
-				std::cout << " ";
-			}
-			for (int j = 0; j < star; j++) {
-				std::cout << "*";
-			}
-			std::cout << std::endl;
-			blank--;
-			star += 2;
-		}
-
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < star; j++) {
-				std::cout << "*";
-			}
-			std::cout << std::endl;
-		}
-
-		for (int i = 0; i < n - 1; i++) {
-			blank++;
-			star -= 2;
-			for (int j = 0; j < blank; j++) {
-				std::cout << " ";
-			}
-			for (int j = 0; j < star; j++) {
-				std::cout << "*";
-			}
-			std::cout << std::endl;
-		}
-	}
-}
+//#include <iostream>
+//
+//int main() {
+//
+//	int cnt;
+//	std::cin >> cnt;
+//
+//	for (int k = 0; k < cnt; k++) {
+//		int n;
+//		std::cin >> n;
+//		int blank = n - 1;
+//		int star = ((n * 3) - 2) - (2 * blank);
+//
+//
+//
+//		for (int i = 0; i < n - 1; i++) {
+//			for (int j = 0; j < blank; j++) {
+//				std::cout << " ";
+//			}
+//			for (int j = 0; j < star; j++) {
+//				std::cout << "*";
+//			}
+//			std::cout << std::endl;
+//			blank--;
+//			star += 2;
+//		}
+//
+//		for (int i = 0; i < n; i++) {
+//			for (int j = 0; j < star; j++) {
+//				std::cout << "*";
+//			}
+//			std::cout << std::endl;
+//		}
+//
+//		for (int i = 0; i < n - 1; i++) {
+//			blank++;
+//			star -= 2;
+//			for (int j = 0; j < blank; j++) {
+//				std::cout << " ";
+//			}
+//			for (int j = 0; j < star; j++) {
+//				std::cout << "*";
+//			}
+//			std::cout << std::endl;
+//		}
+//	}
+//}
 
 
 ////3. 별찍기.
@@ -127,39 +127,49 @@ int main() {
 
 // 5. 완전수와 소수출력
 
-//#include <iostream>
-//
-//int main() {
-//	using namespace std;
-//	int x;
-//	int numberElement = 1;
-//	bool isDecimal = true;
-//	bool isComplete = false;
-//
-//	std::cin >> x;
-//
-//	for (int i = 2; i <= x; i++) {
-//		for (int j = 2; j <= i / 2; j++) {
-//			while (isDecimal == true) {
-//				if (i % j == 0 && i / j > 1) {
-//					isDecimal = false;
-//				}
-//			}
-//			if (isDecimal == false) {
-//				//소수가 아닌 수들에 대해서 완전수인지에 대한 검사를 진행
-//				for (int k = 2; k <= j / 2; k++) {
-//					if (j % k == 0 && k * k != j) {
-//						numberElement += k;
-//						numberElement += j / k;
-//					}
-//				}
-//		}
-//			}
-//	}
-//
-//	for (int i = 2; i <= x; i++) {
-//
-//	}
-//	
-//	return 0;
-//}
+#include <iostream>
+
+int main() {
+	using namespace std;
+	int num;
+	int nowNum = 11;
+	bool isDecimal = true;
+	bool isComplete = false;
+
+	std::cin >> num;
+
+	if (num < 5) {
+
+	}
+	else if (num > 5 && num < 10) {
+
+	}
+	else {
+
+	}
+
+	for (int i = nowNum; i <= num; i++) {
+		for (int j = 2; j <= i / 2; j++) {
+			while (isDecimal == true) {
+				if (i % j == 0) {
+					isDecimal = false;
+				}
+			}
+			if (isDecimal == false) {
+				//소수가 아닌 수들에 대해서 완전수인지에 대한 검사를 진행
+				for (int k = 2; k <= j / 2; k++) {
+					if (j % k == 0 && k * k != j) {
+						numberElement += k;
+						numberElement += j / k;
+					}
+				}
+		}
+			}
+	}
+
+	for (int i = 2; i <= x; i++) {
+
+	}
+	
+	return 0;
+}
