@@ -83,24 +83,25 @@ int main() {
 	int lineForNum = 4;
 	int nowNum = 1;
 
-	for (int p = 0; p < (n / lineForNum) ; p++) {
-		for (int i = 1; i <= 7; i++) {
-			std::cout << nowNum << " * " << i << " = " << nowNum * i;
-			nowNum++;
-			for (int j = 0; j < lineForNum - 1; j++) {
-				std::cout << " ";
-				std::cout << nowNum << " * " << i << " = " << nowNum * i;
-				nowNum++;
+	for (int p = 0; p <= (n / lineForNum) ; p++) {
+			for (int i = 1; i <= 7; i++) {
+				if (nowNum <= n) {
+					std::cout << nowNum << " * " << i << " = " << nowNum * i;
+					nowNum++;
+					for (int j = 0; j < lineForNum - 1; j++) {
+						std::cout << " ";
+						std::cout << nowNum << " * " << i << " = " << nowNum * i;
+						nowNum++;
+					}
+					std::cout << std::endl;
+					nowNum -= lineForNum;
 				}
-			std::cout << std::endl;
-			nowNum -= lineForNum;
 			}
-		nowNum += lineForNum;
-		std::cout << std::endl;
-		}
-		std::cout << std::endl;
-		return 0;
+			nowNum += lineForNum;
+			std::cout << std::endl;
 	}
+		return 0;
+}
 
 // 5. 완전수와 소수출력
 
