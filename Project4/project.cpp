@@ -185,9 +185,41 @@
 
 int main() {
 	int n;
-	std:cin >> n;
-	
+	std::cin >> n;
 
+
+	int elementSum;
+	bool isP;
+	
+	for (int i = 3; i <= n; i++) {
+		elementSum = 1;
+
+		for (int j = 2; j < i; j++) {
+			if (i % j == 0) {
+				elementSum += j;
+			}
+		}
+		if (elementSum == i) {
+			std::cout << "[C] " << i << " = 1 " ;
+			for (int j = 2; j < i; j++) {
+				if (i % j == 0) {
+					std::cout << "+ " << j << " ";
+				}
+			}
+			std::cout << std::endl;
+		}
+
+		isP = true;
+		for (int j = 2; j < i / 2; j++) {
+			if (i % j == 0) {
+				isP = false;
+			}
+		}
+		
+		if (isP == true && i > 10) {
+			std::cout << i << " ";
+		}
+	}
 
 
 
