@@ -180,58 +180,78 @@
 //	return 0;
 //}
 
-//완전수 구하는식
+////완전수 구하는식
+//#include <iostream>
+//
+//int main() {
+//	int n;
+//	std::cin >> n;
+//
+//
+//	int elementSum;
+//	bool isP;
+//	
+//	for (int i = 3; i <= n; i++) {
+//		elementSum = 1;
+//
+//		for (int j = 2; j < i; j++) {
+//			if (i % j == 0) {
+//				elementSum += j;
+//			}
+//		}
+//		if (elementSum == i) {
+//			std::cout << "[C] " << i << " = 1 " ;
+//			for (int j = 2; j < i; j++) {
+//				if (i % j == 0) {
+//					std::cout << "+ " << j << " ";
+//				}
+//			}
+//			std::cout << std::endl;
+//		}
+//
+//		isP = true;
+//		for (int j = 2; j < i / 2; j++) {
+//			if (i % j == 0) {
+//				isP = false;
+//			}
+//		}
+//		
+//		if (isP == true && i > 10) {
+//			std::cout << i << " ";
+//		}
+//	}
+//}
+
+// 6.재귀함수
+
 #include <iostream>
 
+using namespace std;
+
 int main() {
-	int n;
-	std::cin >> n;
+    int cnt, val;
+    cin >> cnt;
 
+    for (int i = 0; i < cnt; ++i) {
+        cin >> val;
 
-	int elementSum;
-	bool isP;
-	
-	for (int i = 3; i <= n; i++) {
-		elementSum = 1;
+        cout << "Backward :";
+        printReverseDigit(val);
 
-		for (int j = 2; j < i; j++) {
-			if (i % j == 0) {
-				elementSum += j;
-			}
-		}
-		if (elementSum == i) {
-			std::cout << "[C] " << i << " = 1 " ;
-			for (int j = 2; j < i; j++) {
-				if (i % j == 0) {
-					std::cout << "+ " << j << " ";
-				}
-			}
-			std::cout << std::endl;
-		}
+    //    cout << endl << "Forward :";
+    //    printDigit(val);
+    //    cout << endl;
+    }
+    return 0;
+}
 
-		isP = true;
-		for (int j = 2; j < i / 2; j++) {
-			if (i % j == 0) {
-				isP = false;
-			}
-		}
-		
-		if (isP == true && i > 10) {
-			std::cout << i << " ";
-		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
+void printReverseDigit(int n) {
+    if (n >= 10) {
+        cout << n % 10;
+        printReverseDigit(n / 10);
+    }
+    else {
+        cout << n;
+    }
 
 }
