@@ -6,22 +6,51 @@
 ////	return 0;
 ////}
 //
-////진수바꾸기
-//
+////1. 실수부분 정수부분 完
 //#include <iostream>
-//using namespace std;
 //
 //int main() {
-//	int num = 1237;
-//	cout << num << endl;
-//	cout << oct << num << endl;
-//	cout << hex << num << endl;
+//	int cnt;
+//	std::cin >> cnt;
 //
-//	cout << showbase << oct << num << endl;
-//	cout << showbase << hex << num << endl;
+//	for (int i = 0; i < cnt; i++) {
+//		float num;
+//		std::cin >> num;
+//		bool isPlus = true;
+//
+//		int intNum;
+//		float floatNum;
+//
+//
+//		intNum = (int)num;
+//		std::cout << intNum << " + ";
+//
+//		floatNum = num - intNum;
+//		std::cout << floatNum;
+//		std::cout << std::endl;
+//	}
+//	return 0;
 //}
-//
-////3. 별찍기.
+// 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+////3. 별찍기. 完
 //
 //#include <iostream>
 //
@@ -67,30 +96,6 @@
 //				std::cout << "*";
 //			}
 //			std::cout << std::endl;
-//		}
-//	}
-//}
-
-
-////3. 별찍기.
-//
-//#include <iostream>
-//
-//int main() {
-//	int num = 3;
-//	int space = num - 1;
-//	int variableStar = num;
-//
-//	for (int i = space; i <= 0; i--) {
-//		std::cout << " " * i << "*" * variableStar << std::endl;
-//		variableStar = variableStar + 2;
-//		if (i == 0) {
-//			for (int j = 0; j < num; j++) {
-//				std::cout << "*" * variableStar << std::endl;
-//			}
-//		}
-//		for (int j = 1; j < num; j++) {
-//			space = j;
 //		}
 //	}
 //}
