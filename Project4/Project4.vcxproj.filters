@@ -13,10 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="리소스 파일\example">
+      <UniqueIdentifier>{7db17003-aeca-46ca-ba79-ddfc3e04e513}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="project.cpp">
       <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="example.cpp">
+      <Filter>리소스 파일\example</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

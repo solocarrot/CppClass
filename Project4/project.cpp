@@ -266,85 +266,80 @@
 //    
 //}
 
-//// 7. 랜드함수
-//
-//#include <iostream>
-//#include <cstdlib>
-//#include <ctime>
-//
-//int main() {
-//	int answer = (rand() % 100) + 1;
-//	int cnt = 1;
-//	int submitNum = (rand() % 100) + 1;
-//	int ceilingNum = 100;
-//	int floorNum = 0;
-//
-//	while (answer != submitNum) {
-//		if (submitNum < answer) {
-//			floorNum = submitNum;
-//			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1) ;
-//			std::cout << submitNum << std::endl;
-//			cnt++;
-//		}
-//		else if (submitNum > answer) {
-//			ceilingNum = submitNum;
-//			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1);
-//			std::cout << submitNum << std::endl;
-//			cnt++;
-//		}
-//	}
-//	std::cout << answer << std::endl;
-//	std::cout << "how try " << cnt << std::endl;
-//	
-//}
-
-// 8.팩토리얼구하기
+// 7. 랜드함수
 
 #include <iostream>
-
-int getToFor(int n);
-int getToRecursive(int n, int sum = 1);
+#include <cstdlib>
+#include <ctime>
 
 int main() {
+	int answer = (rand() % 100) + 1;
+	int cnt = 1;
+	int submitNum = (rand() % 100) + 1;
+	int ceilingNum = 100;
+	int floorNum = 0;
 
-	int cnt;
-	std::cin >> cnt;
-
-	for (int i = 0; i < cnt; i++) {
-		int n;
-		std::cin >> n;
-		int forSum = getToFor(n);
-		std::cout << "interation = " << forSum << std::endl;
-		int recursiveSum = getToRecursive(n, 1);
-		std::cout << "recursive = " << recursiveSum << std::endl;
-	}
-
-
-	return 0;
-
-}
-
-int getToFor(int n) {
-
-	int getToFor = 1;
-
-	for (int i = n; n >= 2; n--) {
-		getToFor *= n;
-	}
-
-	return getToFor;
-
-}
-
-int getToRecursive(int n, int sum = 1) {
-	while (n > 1) {
-		if (n > 1) {
-			n--;
-			getToRecursive(n, sum);
+	while (answer != submitNum) {
+		if (submitNum < answer) {
+			floorNum = submitNum;
+			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1) ;
+			std::cout << submitNum << std::endl;
+			cnt++;
 		}
-		sum *= n;
+		else if (submitNum > answer) {
+			ceilingNum = submitNum;
+			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1);
+			std::cout << submitNum << std::endl;
+			cnt++;
+		}
 	}
-
-	return sum;
-
+	std::cout << answer << std::endl;
+	std::cout << "how try " << cnt << std::endl;
+	
 }
+//
+//// 8.팩토리얼구하기
+//
+//#include <iostream>
+//
+//int getToFor(int n);
+//void getToRecursive(int n, int sum = 1);
+//
+//int main() {
+//
+//	int cnt;
+//	std::cin >> cnt;
+//
+//	for (int i = 0; i < cnt; i++) {
+//		int n;
+//		std::cin >> n;
+//		int forSum = getToFor(n);
+//		std::cout << "interation = " << forSum << std::endl;
+//		int recursivceSum = getToRecursive::sum;
+//		std::cout << "recursive = " << recursiveSum << std::endl;
+//	}
+//
+//
+//	return 0;
+//
+//}
+//
+//int getToFor(int n) {
+//
+//	int getToFor = 1;
+//
+//	for (int i = n; n >= 2; n--) {
+//		getToFor *= n;
+//	}
+//
+//	return getToFor;
+//
+//}
+//
+//void getToRecursive(int n, int sum) {
+//	if (n > 1) {
+//		n--;
+//		getToRecursive(n, sum);
+//	}
+//	sum *= n;
+//}
