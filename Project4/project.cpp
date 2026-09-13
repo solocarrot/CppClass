@@ -270,7 +270,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
 
 int main() {
 	int answer = (rand() % 100) + 1;
@@ -279,22 +278,31 @@ int main() {
 	int ceilingNum = 100;
 	int floorNum = 0;
 
-	while (answer != submitNum) {
+	std::cout << "I have specified one natural number less than or equal to 100. " << std::endl;
+
+	while (submitNum != answer) {
+		std::cout << "Guess the number and enter it : " << submitNum << std::endl;
+
 		if (submitNum < answer) {
+			std::cout << "The number I specified is a number greater than " << submitNum << std::endl;
 			floorNum = submitNum;
 			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1) ;
-			std::cout << submitNum << std::endl;
 			cnt++;
 		}
 		else if (submitNum > answer) {
+			std::cout << "The number I specified is a number less than" << submitNum << std::endl;
 			ceilingNum = submitNum;
 			submitNum = (rand() % (ceilingNum - floorNum)) + (floorNum + 1);
-			std::cout << submitNum << std::endl;
 			cnt++;
 		}
 	}
-	std::cout << answer << std::endl;
-	std::cout << "how try " << cnt << std::endl;
+	if (cnt == 1) {
+		std::cout << "Got it!!! You've succeeded in the  " << cnt << "-th time!" << std::endl;
+
+	}
+	else {
+		std::cout << "Got it!!! You've succeeded in the  " << cnt << "-th times!" << std::endl;
+	}
 	
 }
 //
