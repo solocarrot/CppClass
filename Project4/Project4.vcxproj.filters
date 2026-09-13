@@ -16,6 +16,9 @@
     <Filter Include="리소스 파일\example">
       <UniqueIdentifier>{7db17003-aeca-46ca-ba79-ddfc3e04e513}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\submit">
+      <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="project.cpp">
@@ -23,6 +26,30 @@
     </ClCompile>
     <ClCompile Include="example.cpp">
       <Filter>리소스 파일\example</Filter>
+    </ClCompile>
+    <ClCompile Include="1.floatDivide.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="2.findMSD.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="3.printHexagon.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="4.printTimesTable.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="5.printCompleteNum.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="6.learnRecursive.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="7.randGuess.cpp">
+      <Filter>리소스 파일\submit</Filter>
+    </ClCompile>
+    <ClCompile Include="8.getFactorial.cpp">
+      <Filter>리소스 파일\submit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

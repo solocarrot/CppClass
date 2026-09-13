@@ -34,46 +34,32 @@
 // 
  
 
-// 2.정수의 가장큰자리와 수 출력하기. 完
-
-#include <iostream>
-
-int main() {
-
-	int cnt;
-	std::cin >> cnt;
-
-	for (int i = 0; i < cnt; i++) {
-		int num;
-		std::cin >> num;
-
-		int intLength = 1;
-
-		while ((num / 10) != 0) {
-			num = num / 10;
-			intLength++;
-		}
-
-		std::cout << num % 10 << " @ [" << intLength << "]" << std::endl;
-	}
-	return 0;
-}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+//// 2.정수의 가장큰자리와 수 출력하기. 完
+//
+//#include <iostream>
+//
+//int main() {
+//
+//	int cnt;
+//	std::cin >> cnt;
+//
+//	for (int i = 0; i < cnt; i++) {
+//		int num;
+//		std::cin >> num;
+//
+//		int intLength = 1;
+//
+//		while ((num / 10) != 0) {
+//			num = num / 10;
+//			intLength++;
+//		}
+//
+//		std::cout << num % 10 << " @ [" << intLength << "]" << std::endl;
+//	}
+//	return 0;
+//}
+// 
+// 
  
 ////3. 별찍기. 完
 //
@@ -352,6 +338,9 @@ int main() {
 //	else {
 //		std::cout << "Got it!!! You've succeeded in the  " << cnt << "-th times!" << std::endl;
 //	}
+// 
+// //rand() 와 srand()의 차이는 srand가 70년 이후 지난시간을 기준으로 바꿔줘서 시드가 계속 바뀐다. 
+// // 하지만 rand함수는 처음 시드가 정해져있어서 실행할때마다 같은값이나온다
 //	
 //}
 //
