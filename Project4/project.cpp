@@ -95,35 +95,35 @@
 //	}
 //}
 
-//// 4.구구단
-//
-//#include <iostream>
-//
-//int main() {
-//
-//	int n = 11;
-//	int lineForNum = 4;
-//	int nowNum = 1;
-//
-//	for (int p = 0; p <= (n / lineForNum) ; p++) {
-//			for (int i = 1; i <= 7; i++) {
-//				if (nowNum <= n) {
-//					std::cout << nowNum << " * " << i << " = " << nowNum * i;
-//					nowNum++;
-//					for (int j = 0; j < lineForNum - 1; j++) {
-//						std::cout << " ";
-//						std::cout << nowNum << " * " << i << " = " << nowNum * i;
-//						nowNum++;
-//					}
-//					std::cout << std::endl;
-//					nowNum -= lineForNum;
-//				}
-//			}
-//			nowNum += lineForNum;
-//			std::cout << std::endl;
-//	}
-//		return 0;
-//}
+// 4.구구단
+
+#include <iostream>
+
+int main() {
+
+	int n = 11;
+	int lineForNum = 4;
+	int nowNum = 1;
+
+	for (int p = 0; p <= (n / lineForNum); p++) {
+		for (int i = 1; i <= 7; i++) {
+			std::cout << nowNum << " * " << i << " = " << nowNum * i;
+			nowNum++;
+			for (int j = 0; j < lineForNum - 1 ; j++) {
+				if (nowNum <= n) {
+					std::cout << "	";
+					std::cout << nowNum << " * " << i << " = " << nowNum * i;
+					nowNum++;
+				}
+			}
+			std::cout << std::endl;
+			nowNum -= lineForNum;
+		}
+		nowNum += lineForNum;
+		std::cout << std::endl;
+	}
+	return 0;
+}
 //
 //// 5. 완전수와 소수출력
 //
@@ -180,60 +180,60 @@
 //	return 0;
 //}
 
-//완전수 구하는식
-#include <iostream>
-
-int main() {
-	int cnt;
-	std::cin >> cnt;
-
-	for (int k = 0; k < cnt; k++) {
-		int n;
-		std::cin >> n;
-
-
-		int elementSum;
-		bool isP;
-		bool printP = true;
-
-		for (int i = 3; i <= n; i++) {
-			elementSum = 1;
-
-			for (int j = 2; j < i; j++) {
-				if (i % j == 0) {
-					elementSum += j;
-				}
-			}
-			if (elementSum == i) {
-				if (printP == false) { std::cout << std::endl; }
-				printP = true;
-				std::cout << "[C] " << i << " = 1 ";
-				for (int j = 2; j < i; j++) {
-					if (i % j == 0) {
-						std::cout << "+ " << j << " ";
-					}
-				}
-				std::cout << std::endl;
-			}
-
-			isP = true;
-			for (int j = 2; j < i / 2; j++) {
-				if (i % j == 0) {
-					isP = false;
-				}
-			}
-
-			if (isP == true && i > 10) {
-				if (printP == true) {
-					printP = false;
-					std::cout << "[P] ";
-				}
-				std::cout << i << " ";
-			}
-		}
-	}
-	return 0;
-}
+////완전수 구하는식 完
+//#include <iostream>
+//
+//int main() {
+//	int cnt;
+//	std::cin >> cnt;
+//
+//	for (int k = 0; k < cnt; k++) {
+//		int n;
+//		std::cin >> n;
+//
+//
+//		int elementSum;
+//		bool isP;
+//		bool printP = true;
+//
+//		for (int i = 3; i <= n; i++) {
+//			elementSum = 1;
+//
+//			for (int j = 2; j < i; j++) {
+//				if (i % j == 0) {
+//					elementSum += j;
+//				}
+//			}
+//			if (elementSum == i) {
+//				if (printP == false) { std::cout << std::endl; }
+//				printP = true;
+//				std::cout << "[C] " << i << " = 1 ";
+//				for (int j = 2; j < i; j++) {
+//					if (i % j == 0) {
+//						std::cout << "+ " << j << " ";
+//					}
+//				}
+//				std::cout << std::endl;
+//			}
+//
+//			isP = true;
+//			for (int j = 2; j < i / 2; j++) {
+//				if (i % j == 0) {
+//					isP = false;
+//				}
+//			}
+//
+//			if (isP == true && i > 10) {
+//				if (printP == true) {
+//					printP = false;
+//					std::cout << "[P] ";
+//				}
+//				std::cout << i << " ";
+//			}
+//		}
+//	}
+//	return 0;
+//}
 
 //// 6.재귀함수 完
 //
