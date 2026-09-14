@@ -139,15 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1.floatDivide.cpp" />
-    <ClCompile Include="2.findMSD.cpp" />
-    <ClCompile Include="3.printHexagon.cpp" />
-    <ClCompile Include="4.printTimesTable.cpp" />
-    <ClCompile Include="5.printCompleteNum.cpp" />
-    <ClCompile Include="6.learnRecursive.cpp" />
-    <ClCompile Include="7.randGuess.cpp" />
-    <ClCompile Include="8.getFactorial.cpp" />
-    <ClCompile Include="example.cpp" />
+    <ClCompile Include="enter.cpp" />
     <ClCompile Include="project.cpp" />
   </ItemGroup>
   <ItemGroup>
