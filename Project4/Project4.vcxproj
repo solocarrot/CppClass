@@ -139,7 +139,10 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3.findCharPosition.cpp" />
+    <ClCompile Include="3digitMultiplication.cpp" />
     <ClCompile Include="enter.cpp" />
+    <ClCompile Include="printBinary.cpp" />
     <ClCompile Include="project.cpp" />
   </ItemGroup>
   <ItemGroup>
