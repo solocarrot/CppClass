@@ -80,7 +80,7 @@ int main() {
 	date1 = DayOfYear(10, 31);
 	cout << "재설정된 날짜는 : \n";
 	date1.output(); cout << endl;
-	return 0;
+	return 0;	
 }
 
 DayOfYear::DayOfYear(int monthValue, int dayValue) : month(monthValue), day(dayValue)
@@ -99,7 +99,7 @@ DayOfYear::DayOfYear() : month(1), day(1)
 }
 void DayOfYear::output()
 {
-	cout << month << "월 " << day << "일";
+	cout << month << day;
 }
 
 void DayOfYear::testDate()
@@ -116,8 +116,38 @@ void DayOfYear::testDate()
 	}
 }
 
+class Holiday
+{
+public:
+	Holiday();
+	Holiday(int m, int d, bool theEnforce);
+	void output() const;
+private:
+	DayOfYear date;
+	bool parkingEnforce;
+};
 
+Holiday::Holiday() :date(1,1) , parkingEnforce(false)
+{ }
 
+Holiday::Holiday(int month, int day, bool theEnforce)
+	:date(month, day),parkingEnforce(theEnforce)
+{ }
+
+//void Holiday::output() const
+//{
+//	date.o
+//}
+
+// //const 제대로알고쓰자.
+
+//void welcome(const BankAccount& yourAccount) //&가 참조값을가져오는 거임
+//{
+//	std::cout << "welcome to bank\n"
+//		<< "your account is\n"
+//		yourAccount.output();
+
+}
 
 
 
