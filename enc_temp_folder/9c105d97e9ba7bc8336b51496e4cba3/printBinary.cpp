@@ -22,7 +22,6 @@ int main() {
 			}
 			cout << array[i];
 		}
-		cout << endl;
 	}
 	return 0;
 }

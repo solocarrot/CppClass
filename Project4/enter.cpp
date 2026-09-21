@@ -48,91 +48,91 @@
 //}
 
 // 클래스형 멤버변수
-
-#include <iostream>
-#include <cstdlib>
-
-using namespace std;
-
-class DayOfYear
-{
-public:
-	DayOfYear(int monthValue, int dayValue);
-	DayOfYear(int monthValue);
-	DayOfYear();
-	void input();
-	void output();
-	int getMonthNumber();
-	int getDay();
-private:
-	int month, day;
-	void testDate();
-};
-
-
-int main() {
-	DayOfYear date1(2, 21), date2(5), date3;
-	cout << "초기화된 날짜들 : \n";
-	date1.output(); cout << endl;
-	date2.output(); cout << endl;
-	date3.output(); cout << endl;
-
-	date1 = DayOfYear(10, 31);
-	cout << "재설정된 날짜는 : \n";
-	date1.output(); cout << endl;
-	return 0;	
-}
-
-DayOfYear::DayOfYear(int monthValue, int dayValue) : month(monthValue), day(dayValue)
-{
-	testDate();
-}
-
-DayOfYear::DayOfYear(int monthValue) : month(monthValue), day(1)
-{
-	testDate();
-}
-
-DayOfYear::DayOfYear() : month(1), day(1)
-{
-	testDate();
-}
-void DayOfYear::output()
-{
-	cout << month << day;
-}
-
-void DayOfYear::testDate()
-{
-	if (month < 1 || (month > 12))
-	{
-		cout << "illegal month value \n";
-		exit(1);
-	}
-	if ((day < 1) || (day > 31))
-	{
-		cout << "illegal day value\n";
-		exit(1);
-	}
-}
-
-class Holiday
-{
-public:
-	Holiday();
-	Holiday(int m, int d, bool theEnforce);
-	void output() const;
-private:
-	DayOfYear date;
-	bool parkingEnforce;
-};
-
-Holiday::Holiday() :date(1,1) , parkingEnforce(false)
-{ }
-
-Holiday::Holiday(int month, int day, bool theEnforce)
-	:date(month, day),parkingEnforce(theEnforce)
-{ }
+//
+//#include <iostream>
+//#include <cstdlib>
+//
+//using namespace std;
+//
+//class DayOfYear
+//{
+//public:
+//	DayOfYear(int monthValue, int dayValue);
+//	DayOfYear(int monthValue);
+//	DayOfYear();
+//	void input();
+//	void output();
+//	int getMonthNumber();
+//	int getDay();
+//private:
+//	int month, day;
+//	void testDate();
+//};
+//
+//
+//int main() {
+//	DayOfYear date1(2, 21), date2(5), date3;
+//	cout << "초기화된 날짜들 : \n";
+//	date1.output(); cout << endl;
+//	date2.output(); cout << endl;
+//	date3.output(); cout << endl;
+//
+//	date1 = DayOfYear(10, 31);
+//	cout << "재설정된 날짜는 : \n";
+//	date1.output(); cout << endl;
+//	return 0;	
+//}
+//
+//DayOfYear::DayOfYear(int monthValue, int dayValue) : month(monthValue), day(dayValue)
+//{
+//	testDate();
+//}
+//
+//DayOfYear::DayOfYear(int monthValue) : month(monthValue), day(1)
+//{
+//	testDate();
+//}
+//
+//DayOfYear::DayOfYear() : month(1), day(1)
+//{
+//	testDate();
+//}
+//void DayOfYear::output()
+//{
+//	cout << month << day;
+//}
+//
+//void DayOfYear::testDate()
+//{
+//	if (month < 1 || (month > 12))
+//	{
+//		cout << "illegal month value \n";
+//		exit(1);
+//	}
+//	if ((day < 1) || (day > 31))
+//	{
+//		cout << "illegal day value\n";
+//		exit(1);
+//	}
+//}
+//
+//class Holiday
+//{
+//public:
+//	Holiday();
+//	Holiday(int m, int d, bool theEnforce);
+//	void output() const;
+//private:
+//	DayOfYear date;
+//	bool parkingEnforce;
+//};
+//
+//Holiday::Holiday() :date(1,1) , parkingEnforce(false)
+//{ }
+//
+//Holiday::Holiday(int month, int day, bool theEnforce)
+//	:date(month, day),parkingEnforce(theEnforce)
+//{ }
 
 //void Holiday::output() const
 //{
@@ -140,15 +140,31 @@ Holiday::Holiday(int month, int day, bool theEnforce)
 //}
 
 // //const 제대로알고쓰자.
-
+//
+//class BankAccount
+//{
+//public:
+//	BankAccount(int dollars, int cents, double rate);
+//	BankAccount(int dollars, double rate);
+//	void input();
+//	void output() const;
+// 
+//private:
+//	int money = 1000;
+//
+//};
+//
+//void BankAccount::output() const
+//{
+//	std::cout << BankAccount::money;
+//}
+//
 //void welcome(const BankAccount& yourAccount) //&가 참조값을가져오는 거임
 //{
 //	std::cout << "welcome to bank\n"
-//		<< "your account is\n"
+//		<< "your account is\n";
+//
 //		yourAccount.output();
+//}
 
-}
-
-
-
-
+//
