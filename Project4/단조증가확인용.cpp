@@ -20,8 +20,9 @@ bool sortedArray(int arr[], int MAX_LEN) {
 	
 	int big = arr[4];
 	for (int i = 0; i < 4; i++) {
-		if (arr[i] > big) {
+		if (arr[i] > arr[i+1]) {
 			return false;
+			break;
 		}
 		else {
 			return true;
