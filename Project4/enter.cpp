@@ -218,18 +218,18 @@
 //	else {
 //		cout << "no" << endl;
 //	}
-}
-
-void Account::withdraw(double amount)
-{
-	if (amount > balance) {
-		amount = balance;
-		balance -= amount;
-	}
-}
-
-Account::~Account()
-{
-	cout << "account " << accNum << "is closed" << endl;
-
-}
+//}
+//
+//void Account::withdraw(double amount)
+//{
+//	if (amount > balance) {
+//		amount = balance;
+//		balance -= amount;
+//	}
+//}
+//
+//Account::~Account()
+//{
+//	cout << "account " << accNum << "is closed" << endl;
+//
+//}
