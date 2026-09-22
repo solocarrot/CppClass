@@ -144,6 +144,7 @@
     <ClCompile Include="3.findCharPosition.cpp" />
     <ClCompile Include="4.mergeArray.cpp" />
     <ClCompile Include="5.learn2dimensionArray.cpp" />
+    <ClCompile Include="6.getMinMax.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="printBinary.cpp" />
     <ClCompile Include="단조증가확인용.cpp" />
