@@ -17,10 +17,11 @@ int main() {
 	multiply(matrix1, matrix2, resultArr, SIZE);
 
 	for (int i = 0; i < 3; i++) {
+		cout << "|";
 		for (int j = 0; j < 3; j++) {
-			cout << resultArr[i][j];
+			cout << " " << resultArr[i][j];
 		}
-		cout << endl;
+		cout << "|" << endl;
 	}
 
 }
@@ -52,7 +53,12 @@ void multiply(int arr1[][SIZE], int arr2[][SIZE], int resultArr[][SIZE], int SIZ
 	{
 		for (int j = 0; j < SIZE; j++)
 		{
-			resultArr[i][j] = arr1[i][j] * arr2[j][i];
+			int sum = 0;
+			for (int k = 0; k < SIZE;k++) 
+			{
+				sum += arr1[i][k] * arr2[k][j];
+			}
+			resultArr[i][j] = sum;
 		}
 	}
 }
