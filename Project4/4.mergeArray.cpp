@@ -11,6 +11,12 @@ int main() {
     cin >> cnt;
     for (int i = 0; i < cnt; ++i) 
     {
+        for (int j = 0; j < SIZE; j++) {
+            cin >> arr1[j];
+        }
+        for (int j = 0; j < SIZE; j++) {
+            cin >> arr2[j];
+        }
         if (readAscSortedArray(arr1, SIZE) && readAscSortedArray(arr2, SIZE)) 
         {
             mergeArray(arr1, arr2, resultArr, SIZE);
@@ -43,18 +49,37 @@ bool readAscSortedArray(int arr[], int size) {
 
 void mergeArray(int arr1[], int arr2[], int resultArr[], int size)
 {
-    for (int i, j = 0; i + j < size * 2;) 
+    for (int i= 0, j = 0; (i + j) < size * 2;)
     {
-        if (arr1[i] >= arr2[i]) 
+        while (i < size && j < size)
         {
-            resultArr[i + j] = arr1[i];
-            i++;
+            if (arr1[i] < arr2[j])
+            {
+                resultArr[i + j] = arr1[i];
+                i++;
+            }
+            else
+            {
+                resultArr[i + j] = arr2[j];
+                j++;
+            }
         }
-        else 
+        if (i == size && j != size)
         {
             resultArr[i + j] = arr2[j];
             j++;
         }
+        else if (j == size && i != size)
+        {
+            resultArr[i + j] = arr1[i];
+            i++;
+        }
     }
+}
 
+void printArray(int resultArr[], int size)
+{
+    for (int i = 0; i < size; i++) {
+        cout << resultArr[i] << " ";
+    }
 }
