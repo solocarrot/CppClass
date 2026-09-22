@@ -24,6 +24,7 @@ int main() {
 				if (getMinMax(arr1, arr2, SIZE, min, max))
 				{
 					cout << "Min : " << min << ", Max : " << max << "\n";
+					cout << "ALL SAME : " << min << "\n";
 				}
 		}
 		else cout << "[Error] Unsorted input\n";
