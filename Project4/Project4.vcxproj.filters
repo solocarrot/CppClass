@@ -13,34 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="리소스 파일\submit">
-      <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="리소스 파일\따라치기">
+    <Filter Include="소스 파일\따라치기">
       <UniqueIdentifier>{c15a27a2-191e-4a78-b80c-1f0d6728e3eb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\submit\과제연습용">
+    <Filter Include="소스 파일\submit">
+      <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\submit\과제연습용">
       <UniqueIdentifier>{3bf5ff0e-6d14-4528-9187-f4c44c151c8b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="project.cpp">
-      <Filter>리소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
     <ClCompile Include="enter.cpp">
-      <Filter>리소스 파일\따라치기</Filter>
+      <Filter>소스 파일\따라치기</Filter>
     </ClCompile>
     <ClCompile Include="printBinary.cpp">
-      <Filter>리소스 파일\submit\과제연습용</Filter>
+      <Filter>소스 파일\submit\과제연습용</Filter>
     </ClCompile>
     <ClCompile Include="3.findCharPosition.cpp">
-      <Filter>리소스 파일\submit\과제연습용</Filter>
+      <Filter>소스 파일\submit\과제연습용</Filter>
     </ClCompile>
     <ClCompile Include="2.3digitMultiplication.cpp">
-      <Filter>리소스 파일\submit\과제연습용</Filter>
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="단조증가확인용.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="6.getMinMax.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="4.mergeArray.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="5.learn2dimensionArray.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="2차원배열연습.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>소스 파일\따라치기</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
