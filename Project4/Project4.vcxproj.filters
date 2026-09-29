@@ -57,6 +57,12 @@
     <ClCompile Include="Account.cpp">
       <Filter>소스 파일\따라치기</Filter>
     </ClCompile>
+    <ClCompile Include="IntPair.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="7.mergeArray.cpp">
+      <Filter>소스 파일\submit\과제연습용</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
@@ -64,6 +70,15 @@
   <ItemGroup>
     <ClInclude Include="Account.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CharPair.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IntPair.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="7.mergeArray.h">
+      <Filter>헤더 파일\과제</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

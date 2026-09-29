@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -145,6 +145,7 @@
     <ClCompile Include="4.mergeArray.cpp" />
     <ClCompile Include="5.learn2dimensionArray.cpp" />
     <ClCompile Include="6.getMinMax.cpp" />
+    <ClCompile Include="7.mergeArray.cpp" />
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="IntPair.cpp" />
