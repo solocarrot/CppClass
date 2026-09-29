@@ -159,3 +159,12 @@
 20. friend를 함수앞에 붙이면 비멤버함수이지만 게터 세터없이 클래스안의 값을 가져올수있다.
 
 21. class1 안에 friend class2가 있으면 class2에서 class1의 private에 마구 접근가능하다.
+
+09/24
+
+1. cin 으로입력받을때 cin >> val1 일때 반환값? 
+
+2. << 연산자를 오버라이딩할려면 ostream& 을 반환값으로 가져야한다 ostream& operator<<(ostream& output, const money& amount) 이런식으로 오버라이딩하면 amount를 출력할때 amount 의
+세부사항에 따라 다르게 출력이가능해짐.
+
+3. 할당연산자 , 이랑 = 은 포인터가없을때는 쉬운데 포인터개념들어가면 어렵다.

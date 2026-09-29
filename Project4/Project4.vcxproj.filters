@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\submit\과제연습용">
       <UniqueIdentifier>{3bf5ff0e-6d14-4528-9187-f4c44c151c8b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\과제">
+      <UniqueIdentifier>{5bcb95cf-641d-4d2f-b658-6b7c6fe2585f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enter.cpp">
