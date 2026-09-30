@@ -146,6 +146,7 @@
     <ClCompile Include="5.learn2dimensionArray.cpp" />
     <ClCompile Include="6.getMinMax.cpp" />
     <ClCompile Include="7.mergeArray.cpp" />
+    <ClCompile Include="8.runMatrix.cpp" />
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="ArrayMain.cpp" />
     <ClCompile Include="enter.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
     <ClInclude Include="IntPair.h" />
+    <ClInclude Include="Matrix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
