@@ -4,7 +4,7 @@ class Matrix
 private:
 	static const int SIZE = 3;
 	int arr[SIZE][SIZE];
-	int resultWidth;
+	int resultWidth = 3;
 
 public:
 	void read();
@@ -13,4 +13,5 @@ public:
 	Matrix multi(Matrix mat);
 	Matrix transpose(Matrix mat);
 	void getWidth(int,int);
+	bool isPlus(int);
 };

@@ -13,10 +13,35 @@ void Matrix::read()
 			cin >> arr[i][j];
 			getWidth(j,nowWidth);
 		}
+		if (nowWidth > resultWidth)
+		{
+			resultWidth = nowWidth;
+		}
 	}
 }
 
-void Matrix::getWidth(int j , int nowwidth)
+void Matrix::getWidth(int j , int nowWidth)
+{
+	if (isPlus == false) { nowWidth++; }
+	while (j != 0) {
+		nowWidth++;
+		j /= 10;
+	}
+}
+
+bool Matrix::isPlus(int j)
+{
+	if (j * -1 > 0)
+	{
+		return false;
+	}
+	else 
+	{
+		return true;
+	}
+}
+
+void Matrix::print() const
 {
 	
 }
