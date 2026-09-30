@@ -147,6 +147,7 @@
     <ClCompile Include="6.getMinMax.cpp" />
     <ClCompile Include="7.mergeArray.cpp" />
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="ArrayMain.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="IntPair.cpp" />
     <ClCompile Include="printBinary.cpp" />
@@ -156,7 +157,7 @@
     <Text Include="review.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="7.mergeArray.h" />
+    <ClInclude Include="Array.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
     <ClInclude Include="IntPair.h" />
