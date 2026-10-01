@@ -13,45 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\따라치기">
-      <UniqueIdentifier>{c15a27a2-191e-4a78-b80c-1f0d6728e3eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\submit">
-      <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\과제">
       <UniqueIdentifier>{5bcb95cf-641d-4d2f-b658-6b7c6fe2585f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\수업">
+      <UniqueIdentifier>{3bc7aeac-931d-4397-a476-27bf199190ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\수업">
+      <UniqueIdentifier>{c15a27a2-191e-4a78-b80c-1f0d6728e3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\과제">
+      <UniqueIdentifier>{6d2e3082-7d94-438e-9453-21d3749535de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\과제\cpp">
+      <UniqueIdentifier>{ca4a4601-2686-4133-9902-bbfca5c9d12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\과제\main">
+      <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enter.cpp">
-      <Filter>소스 파일\따라치기</Filter>
+      <Filter>소스 파일\수업</Filter>
     </ClCompile>
     <ClCompile Include="IntPair.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\수업</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IntPair.h">
+      <Filter>헤더 파일\수업</Filter>
+    </ClInclude>
     <ClInclude Include="Account.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\수업</Filter>
     </ClInclude>
     <ClInclude Include="CharPair.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="IntPair.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Array.h">
-      <Filter>헤더 파일\과제</Filter>
-    </ClInclude>
-    <ClInclude Include="Fraction.h">
-      <Filter>헤더 파일\과제</Filter>
-    </ClInclude>
-    <ClInclude Include="Matrix.h">
-      <Filter>헤더 파일\과제</Filter>
+      <Filter>헤더 파일\수업</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

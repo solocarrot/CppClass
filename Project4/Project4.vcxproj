@@ -146,12 +146,9 @@
     <Text Include="review.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Array.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
-    <ClInclude Include="Fraction.h" />
     <ClInclude Include="IntPair.h" />
-    <ClInclude Include="Matrix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
