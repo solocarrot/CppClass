@@ -19,9 +19,6 @@
     <Filter Include="소스 파일\submit">
       <UniqueIdentifier>{017812dc-1297-464c-bcb5-6540a832a80a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\submit\과제연습용">
-      <UniqueIdentifier>{3bf5ff0e-6d14-4528-9187-f4c44c151c8b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\과제">
       <UniqueIdentifier>{5bcb95cf-641d-4d2f-b658-6b7c6fe2585f}</UniqueIdentifier>
     </Filter>
@@ -30,38 +27,8 @@
     <ClCompile Include="enter.cpp">
       <Filter>소스 파일\따라치기</Filter>
     </ClCompile>
-    <ClCompile Include="printBinary.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="3.findCharPosition.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="2.3digitMultiplication.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="단조증가확인용.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="6.getMinMax.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="4.mergeArray.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="5.learn2dimensionArray.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="2차원배열연습.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="Account.cpp">
-      <Filter>소스 파일\따라치기</Filter>
-    </ClCompile>
     <ClCompile Include="IntPair.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="7.mergeArray.cpp">
-      <Filter>소스 파일\submit\과제연습용</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +44,13 @@
     <ClInclude Include="IntPair.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="7.mergeArray.h">
+    <ClInclude Include="Array.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Fraction.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
       <Filter>헤더 파일\과제</Filter>
     </ClInclude>
   </ItemGroup>
