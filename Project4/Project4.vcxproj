@@ -147,13 +147,16 @@
     <ClCompile Include="6.getMinMax.cpp" />
     <ClCompile Include="7.mergeArray.cpp" />
     <ClCompile Include="8.runMatrix.cpp" />
+    <ClCompile Include="9.runFraction.cpp" />
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="ArrayMain.cpp" />
     <ClCompile Include="enter.cpp" />
+    <ClCompile Include="FractionMain.cpp" />
     <ClCompile Include="IntPair.cpp" />
     <ClCompile Include="MatrixMain.cpp" />
     <ClCompile Include="printBinary.cpp" />
     <ClCompile Include="단조증가확인용.cpp" />
+    <ClCompile Include="최대공약수.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
@@ -162,6 +165,7 @@
     <ClInclude Include="Array.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
+    <ClInclude Include="Fraction.h" />
     <ClInclude Include="IntPair.h" />
     <ClInclude Include="Matrix.h" />
   </ItemGroup>
