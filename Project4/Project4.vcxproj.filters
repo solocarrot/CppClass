@@ -39,6 +39,12 @@
     <ClCompile Include="IntPair.cpp">
       <Filter>소스 파일\수업</Filter>
     </ClCompile>
+    <ClCompile Include="FractionMain2.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
+    <ClCompile Include="Fraction.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="CharPair.h">
       <Filter>헤더 파일\수업</Filter>
+    </ClInclude>
+    <ClInclude Include="Fraction.h">
+      <Filter>헤더 파일\과제</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

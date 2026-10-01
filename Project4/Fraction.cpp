@@ -123,3 +123,8 @@ bool Fraction::isPlus()
 		return true;
 	}
 }
+
+Fraction operator+(Fraction& fraction) const
+{
+	
+}

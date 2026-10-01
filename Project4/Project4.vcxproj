@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="enter.cpp" />
+    <ClCompile Include="Fraction.cpp" />
+    <ClCompile Include="FractionMain2.cpp" />
     <ClCompile Include="IntPair.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
+    <ClInclude Include="Fraction.h" />
     <ClInclude Include="IntPair.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
