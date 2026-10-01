@@ -10,10 +10,10 @@ Fraction::Fraction()
 	isPluss = true;
 }
 
-Fraction::Fraction(int num, int denom)
+Fraction::Fraction(int num1, int denom1)
 {
-	num = num;
-	denom = denom;
+	num = num1;
+	denom = denom1;
 
 	if (denom == 0)
 	{
@@ -27,11 +27,9 @@ Fraction::Fraction(int num, int denom)
 void Fraction::reduce()
 {
 	int gcd = getGcd(num,denom);
-	if (gcd != 1)
-	{
-		num = num / gcd;
-		denom = denom / gcd;
-	}
+
+	num = num / gcd;
+	denom = denom / gcd;
 }
 
 int Fraction::getGcd(int num2, int denom2)
@@ -61,8 +59,20 @@ void Fraction::set(int num2, int denom2)
 Fraction Fraction::add(Fraction fraction)
 {
 	Fraction resultFraction;
-	resultFraction.num = num + fraction.num;
-	resultFraction.denom = denom + fraction.denom;
+	if (fraction.isPluss == false)
+	{
+		fraction.num *= -1;
+	}
+	if (isPluss == false) {
+		resultFraction.num = -1 * num * fraction.denom + fraction.num * denom;
+	}
+	else
+	{
+		resultFraction.num = num * fraction.denom + fraction.num * denom;
+	}
+	
+	resultFraction.num = num * fraction.denom + fraction.num * denom;
+	resultFraction.denom = denom * fraction.denom;
 
 	resultFraction.isPluss = resultFraction.isPlus();
 	resultFraction.reduce();
