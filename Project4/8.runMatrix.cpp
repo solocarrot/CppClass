@@ -11,7 +11,7 @@ void Matrix::read()
 		for (int j = 0; j < SIZE;j++)
 		{
 			cin >> arr[i][j];
-			getWidth(j,nowWidth);
+			nowWidth = getWidth(j,nowWidth);
 		}
 		if (nowWidth > resultWidth)
 		{
@@ -20,13 +20,15 @@ void Matrix::read()
 	}
 }
 
-void Matrix::getWidth(int j , int nowWidth)
+int Matrix::getWidth(int j , int nowWidth)
 {
-	if (isPlus == false) { nowWidth++; }
-	while (j != 0) {
+	if (isPlus(j) == false) { nowWidth++; }
+	while (j != 0) 
+	{
 		nowWidth++;
 		j /= 10;
 	}
+	return nowWidth;
 }
 
 bool Matrix::isPlus(int j)
@@ -43,5 +45,24 @@ bool Matrix::isPlus(int j)
 
 void Matrix::print() const
 {
-	
+	for (int i = 0; i < SIZE;i++)
+	{
+		cout << "|" << " ";
+		for (int j = 0; j < SIZE; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+		cout << "|" << endl;
+	}
+}
+
+int[][] transpose(int arr[][SIZE], int resultArr[][SIZE])
+{
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			resultArr[j][i] = arr[i][j];
+		}
+	}
 }

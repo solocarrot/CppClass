@@ -11,7 +11,7 @@ public:
 	void print() const;
 	Matrix add(Matrix mat);
 	Matrix multi(Matrix mat);
-	Matrix transpose(Matrix mat);
-	void getWidth(int,int);
+	Matrix transpose();
+	int getWidth(int,int);
 	bool isPlus(int);
 };
