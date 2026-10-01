@@ -56,13 +56,46 @@ void Matrix::print() const
 	}
 }
 
-int[][] transpose(int arr[][SIZE], int resultArr[][SIZE])
+Matrix Matrix::transpose()
 {
+	Matrix resultMatrix;
 	for (int i = 0; i < SIZE; i++)
 	{
 		for (int j = 0; j < SIZE; j++)
 		{
-			resultArr[j][i] = arr[i][j];
+			resultMatrix.arr[j][i] = arr[i][j];
 		}
 	}
+	return resultMatrix;
+}
+
+Matrix Matrix::add(Matrix mat2) 
+{
+	Matrix resultMatrix;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			resultMatrix.arr[i][j] = arr[i][j] + mat2.arr[i][j];
+		}
+	}
+	return resultMatrix;
+}
+
+Matrix Matrix::multi(Matrix mat) 
+{
+	Matrix resultMatrix;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			int sum = 0;
+			for	(int k = 0; k < SIZE;k++) 
+			{
+				sum += arr[i][k] * mat.arr[k][j];
+			}
+		resultMatrix.arr[i][j] = sum;
+		}
+	}
+	return resultMatrix;
 }
