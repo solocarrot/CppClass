@@ -14,17 +14,25 @@
 //        for (int j = 0; j < SIZE; j++) {
 //            cin >> arr1[j];
 //        }
-//        for (int j = 0; j < SIZE; j++) {
-//            cin >> arr2[j];
-//        }
-//        if (readAscSortedArray(arr1, SIZE) && readAscSortedArray(arr2, SIZE)) 
+//        if (readAscSortedArray(arr1, SIZE) == false)
 //        {
-//            mergeArray(arr1, arr2, resultArr, SIZE);
-//            printArray(resultArr, SIZE * 2);
-//        }
-//        else 
-//        { 
 //            cout << "[Error] Unsorted input\n ";
+//            continue;
+//        }
+//        else
+//        {
+//            for (int j = 0; j < SIZE; j++) {
+//                cin >> arr2[j];
+//            }
+//            if (readAscSortedArray(arr2, SIZE))
+//            {
+//                mergeArray(arr1, arr2, resultArr, SIZE);
+//                printArray(resultArr, SIZE * 2);
+//            }
+//            else
+//            {
+//                cout << "[Error] Unsorted input\n ";
+//            }
 //        }
 //    }
 //    return 0;

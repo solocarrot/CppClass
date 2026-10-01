@@ -2,7 +2,7 @@
 //using namespace std;
 //
 //const int SIZE = 3;
-
+//
 //void transpose(int[][SIZE], int[][SIZE], int);
 //void add(int[][SIZE], int[][SIZE], int[][SIZE], int);
 //void multiply(int[][SIZE], int[][SIZE], int[][SIZE], int);
@@ -35,7 +35,7 @@
 //		}
 //	}
 //}
-
+//
 //void add(int arr1[][SIZE], int arr2[][SIZE], int resultArr[][SIZE], int SIZE) 
 //{
 //	for (int i = 0; i < SIZE; i++)
@@ -46,7 +46,7 @@
 //		}
 //	}
 //}
-
+//
 //void multiply(int arr1[][SIZE], int arr2[][SIZE], int resultArr[][SIZE], int SIZE) 
 //{
 //		for (int i = 0; i < SIZE; i++)

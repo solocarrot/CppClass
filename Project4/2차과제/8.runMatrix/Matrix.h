@@ -4,11 +4,12 @@ class Matrix
 private:
 	static const int SIZE = 3;
 	int arr[SIZE][SIZE];
-	int resultWidth = 3;
+	int maxWidth = 1;
 
 public:
 	void read();
-	void print() const;
+	void getMaxWidth();
+	void print() ;
 	Matrix add(Matrix mat);
 	Matrix multi(Matrix mat);
 	Matrix transpose();
