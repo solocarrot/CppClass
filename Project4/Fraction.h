@@ -4,7 +4,7 @@ class Fraction
 private:
 	int num;
 	int denom;
-	bool isPluss;
+	int gcd;
 public:
 	Fraction();
 	Fraction(int, int);
@@ -14,4 +14,6 @@ public:
 	void reduce();
 	int getGcd(int,int);
 	bool isPlus();
+
+	Fraction operator+(const Fraction&) const;
 };

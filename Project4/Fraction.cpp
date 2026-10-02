@@ -7,7 +7,6 @@ Fraction::Fraction()
 {
 	num = 1;
 	denom = 1;
-	isPluss = true;
 }
 
 Fraction::Fraction(int num1, int denom1)
@@ -20,13 +19,29 @@ Fraction::Fraction(int num1, int denom1)
 		cout << "ERR" << endl;
 		denom = 1;
 	}
-	isPluss = isPlus();
 	reduce();
 }
 
 void Fraction::reduce()
 {
-	int gcd = getGcd(num,denom);
+	if (num < 0 && denom > 0)
+	{
+		int gcd = getGcd(-1 * num, denom);
+	}
+	else if(num > 0 && denom < 0)
+	{
+		int gcd = getGcd(num, -1 * denom);
+		num *= -1;
+		denom *= -1;
+	}
+	//더하기 할때 안예뻐서 분모는 양수 분자는 음수로 만들어주기.
+	else if (num < 0 && denom < 0) 
+	{
+	num *= -1;
+	denom *= -1;
+	getGcd(num, denom);
+	}
+	else { getGcd(num, denom); }
 
 	num = num / gcd;
 	denom = denom / gcd;
@@ -53,78 +68,56 @@ void Fraction::set(int num2, int denom2)
 		cout << "ERR" << endl;
 		denom = 1;
 	}
-	isPluss = isPlus();
+	//reduce();
 }
 
-Fraction Fraction::add(Fraction fraction)
-{
-	Fraction resultFraction;
-	if (fraction.isPluss == false)
-	{
-		fraction.num *= -1;
-	}
-	if (isPluss == false) {
-		resultFraction.num = -1 * num * fraction.denom + fraction.num * denom;
-	}
-	else
-	{
-		resultFraction.num = num * fraction.denom + fraction.num * denom;
-	}
-	
-	resultFraction.num = num * fraction.denom + fraction.num * denom;
-	resultFraction.denom = denom * fraction.denom;
-
-	resultFraction.isPluss = resultFraction.isPlus();
-	resultFraction.reduce();
-
-	return resultFraction;
-}
+//Fraction Fraction::add(Fraction fraction)
+//{
+//	Fraction resultFraction;
+//	if (fraction.isPluss == false)
+//	{
+//		fraction.num *= -1;
+//	}
+//	if (isPluss == false) {
+//		resultFraction.num = -1 * num * fraction.denom + fraction.num * denom;
+//	}
+//	else
+//	{
+//		resultFraction.num = num * fraction.denom + fraction.num * denom;
+//	}
+//	
+//	resultFraction.num = num * fraction.denom + fraction.num * denom;
+//	resultFraction.denom = denom * fraction.denom;
+//
+//	resultFraction.isPluss = resultFraction.isPlus();
+//	resultFraction.reduce();
+//
+//	return resultFraction;
+//}
 
 void Fraction::print() const
 {
-	if (isPluss == false)
-	{
+	
 		if (denom == 1)
 		{
-			cout << "-" <<num << endl;
-		}
-		else
-		{
-			cout << "-" << num << "/" << denom << endl;
-		}
-	}
-	else
-	{
-		if (denom == 1)
-		{
-			cout << num << endl;
+			cout <<num << endl;
 		}
 		else
 		{
 			cout << num << "/" << denom << endl;
 		}
-	}
 }
 
-bool Fraction::isPlus()
-{
-	if (num > 0 && denom < 0)
-	{
-		denom = denom * -1;
-		return false;
-	}
-	else if (num < 0 && denom > 0)
-	{
-		num = num * -1;
-		return false;
-	}
-	else
-	{
-		return true;
-	}
-}
 
-Fraction operator+(Fraction& fraction) const
+Fraction Fraction::operator+(const Fraction& fraction) const
 {
+	Fraction resultFraction;
+	resultFraction.num = num * fraction.denom + fraction.num * denom;
+	resultFraction.denom = denom * fraction.denom;
+
+	resultFraction.reduce();
+	return resultFraction;
 	
 }
+
+//gcd 구할때 -를 양수로만들고 reduce를 양수상태로하고 분자로 -만들어주기...
