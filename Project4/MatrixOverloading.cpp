@@ -29,15 +29,21 @@ int Matrix::get(int i, int j) const
 
 std::ostream& operator<<(std::ostream& os, const Matrix& matrix)
 {
-	matrix.getMaxWidth();
+	int maxWidth = matrix.getMaxWidth();
 
 	for (int i = 0; i < SIZE; i++)
 	{
 		printf("|");
 		for (int j = 0; j < SIZE; j++)
 		{
-			for(int k = matrix.maxWid)
-			os << matrix.get(i, j);
+			for (int k = maxWidth; k > 0; k--)
+			{
+				int nowNum = matrix.get(i, j);
+				os << nowNum % 10;
+				nowNum /= 10;
+				if (nowNum == 0) { os << " "; }
+			}
+			
 		}
 		printf("|\n");
 	}
@@ -57,8 +63,9 @@ Matrix Matrix::operator!() const
 	return matrix;
 }
 
-void Matrix::getMaxWidth() const
+int Matrix::getMaxWidth() const
 {
+	int maxWidth;
 	for (int i = 0; i < SIZE; i++)
 	{
 		for (int j = 0; j < SIZE; j++)
@@ -79,4 +86,5 @@ void Matrix::getMaxWidth() const
 		}
 		
 	}
+	return maxWidth;
 }
