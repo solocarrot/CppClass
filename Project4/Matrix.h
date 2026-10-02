@@ -9,12 +9,17 @@ class Matrix
 {
 private:
 	int arr[SIZE][SIZE];
-	static int maxWidth;
-	
+
 	
 public:
 	void set(int,int,int);
 	int get(int,int) const;
+
+	Matrix operator!() const;
+
+	//maxWidth를 바꾸는 함수 이차원배열 cout하기전에 실행됨
+	int getMaxWidth() const;
+
 
 };
 
