@@ -7,10 +7,8 @@ int main()
 {
     Fraction f1, f2(2, -5), f3;
     f1.set(2, 3);
-    f1.print();
     f3 = f1+f2;
-    //cout << f1 << “ + ” << f2;
-    //cout << "=" << f3 << endl;
-    f3.print();
+    cout << f1 << " + " << f2;
+    cout << " = " << f3 << endl;
     return 0;
 }

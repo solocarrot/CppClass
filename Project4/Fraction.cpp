@@ -26,11 +26,11 @@ void Fraction::reduce()
 {
 	if (num < 0 && denom > 0)
 	{
-		int gcd = getGcd(-1 * num, denom);
+		gcd = getGcd(-1 * num, denom);
 	}
 	else if(num > 0 && denom < 0)
 	{
-		int gcd = getGcd(num, -1 * denom);
+		gcd = getGcd(num, -1 * denom);
 		num *= -1;
 		denom *= -1;
 	}
@@ -39,9 +39,9 @@ void Fraction::reduce()
 	{
 	num *= -1;
 	denom *= -1;
-	getGcd(num, denom);
+	gcd = getGcd(num, denom);
 	}
-	else { getGcd(num, denom); }
+	else { gcd = getGcd(num, denom); }
 
 	num = num / gcd;
 	denom = denom / gcd;
@@ -120,4 +120,21 @@ Fraction Fraction::operator+(const Fraction& fraction) const
 	
 }
 
-//gcd 구할때 -를 양수로만들고 reduce를 양수상태로하고 분자로 -만들어주기...
+int Fraction::getNum() const
+{
+	return num;
+}
+
+int Fraction::getDenom() const
+{
+	return denom;
+}
+
+std::ostream& operator<<(std::ostream& os, const Fraction& fraction)
+{
+	int num = fraction.getNum();
+	int denom = fraction.getDenom();
+
+	os << num << "/" << denom;
+	return os;
+}
