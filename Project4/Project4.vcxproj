@@ -143,6 +143,7 @@
     <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="FractionMain2.cpp" />
     <ClCompile Include="IntPair.cpp" />
+    <ClCompile Include="MatrixOverloading.cpp" />
     <ClCompile Include="MatrixOverloadingMain.cpp" />
     <ClCompile Include="질문.cpp" />
   </ItemGroup>

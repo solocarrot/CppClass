@@ -6,7 +6,7 @@ class Fraction
 private:
 	int num;
 	int denom;
-	int gcd;
+	int gcd = 1;
 public:
 	//기본생성자랑 인자받는 생성자랑 set함수 직접적으로 Fraction의 private값 바꾸기때문에 계속 reduce() 넣어줘야하는부분들
 	Fraction();
