@@ -9,6 +9,7 @@ private:
 	int year;
 	int month;
 	int day;
+	
 
 public:
 	Day();
@@ -22,9 +23,11 @@ public:
 	Day operator++(int);
 	Day operator--(int);
 
+	bool isYoon();
 
 
 
 };
 
 std::ostream& operator<<(std::ostream& os, const Day&);
+std::istream& operator>>(std::istream& is, Day&);
