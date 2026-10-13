@@ -11,10 +11,13 @@ int main()
 
 	Money m3;
 	m3 = m1 + m2;
-	cout << m3;
-	return 1;
+	cout << m3 << endl;
 
 	cout << m1 << "==" << m2 << "is";
 	if (m1 == m2) cout << "true";
 	else cout << "false";
+
+
+
+	return 1;
 }

@@ -49,21 +49,21 @@ std::ostream& operator<<(std::ostream& os, const Money& money)
 	return os;
 }
 
-Money Money::operator+(const Money& money)
+Money Money::operator+(const Money& money) const
 {
 	Money resultMoney;
-	dollar += money.getDollar();
-	cent += money.getCent();
+	resultMoney.dollar = dollar + money.getDollar();
+	resultMoney.cent = cent + money.getCent();
 
 	resultMoney.setter(dollar, cent);
 	return resultMoney;
 }
 
-Money Money::operator-(const Money& money)
+Money Money::operator-(const Money& money) const
 {
 	Money resultMoney;
-	dollar -= money.getDollar();
-	cent -= money.getCent();
+	resultMoney.dollar = dollar - money.getDollar();
+	resultMoney.cent = cent - money.getCent();
 
 	resultMoney.setter(dollar, cent);
 	return resultMoney;
@@ -72,5 +72,25 @@ Money Money::operator-(const Money& money)
 bool Money::operator==(const Money& money) const
 {
 	if (dollar == money.getDollar() && cent == money.getCent()) return true;
+	else return false;
+}
+bool Money::operator>=(const Money& money) const
+{
+	if (dollar >= money.getDollar() && cent >= money.getCent()) return true;
+	else return false;
+}
+bool Money::operator<=(const Money& money) const
+{
+	if (dollar <= money.getDollar() && cent <= money.getCent()) return true;
+	else return false;
+}
+bool Money::operator>(const Money& money) const
+{
+	if (dollar > money.getDollar() && cent > money.getCent()) return true;
+	else return false;
+}
+bool Money::operator<(const Money& money) const
+{
+	if (dollar < money.getDollar() && cent < money.getCent()) return true;
 	else return false;
 }
