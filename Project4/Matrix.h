@@ -9,12 +9,14 @@ class Matrix
 {
 private:
 	int arr[SIZE][SIZE];
-	static int maxWidth;
 	
 	
 public:
 	void set(int,int,int);
 	int get(int,int) const;
+
+	int getLength(int);
+	int getMaxLength(int arr[][SIZE]);
 
 };
 

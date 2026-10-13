@@ -29,6 +29,7 @@ int Matrix::get(int i, int j) const
 
 std::ostream& operator<<(std::ostream& os, const Matrix& matrix)
 {
+	matrix.getMaxLength()
 	for (int i = 0; i < SIZE; i++)
 	{
 		for (int j = 0; j < SIZE; j++)
@@ -37,4 +38,50 @@ std::ostream& operator<<(std::ostream& os, const Matrix& matrix)
 		}
 	}
 	return os;
+}
+
+int Matrix::getLength(int num)
+{
+	int length = 0;
+	if (num == 0)
+	{
+		length = 1;
+		return 1;
+	}
+	else
+	{
+		if (num > 0)
+		{
+
+		}
+		else if (num < 0)
+		{
+			length++;
+		}
+
+		while (num != 0)
+		{
+			num /= 10;
+			length++;
+		}
+		return length;
+	}
+}
+
+int Matrix::getMaxLength(int array[SIZE][SIZE])
+{
+	int maxLength = 0;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			int nowLength = 0;
+			nowLength = getLength(array[i][j]);
+			if (nowLength > maxLength)
+			{
+				maxLength = nowLength;
+			}
+		}
+	}
+	return maxLength;
 }
