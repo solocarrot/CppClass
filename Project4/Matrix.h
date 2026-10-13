@@ -16,7 +16,7 @@ public:
 	int get(int,int) const;
 
 	int getLength(int);
-	int getMaxLength(int arr[][SIZE]);
+	int getMaxLength();
 
 };
 
