@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="class.cpp" />
+    <ClCompile Include="dDay.cpp" />
+    <ClCompile Include="dDayMain.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="FractionMain2.cpp" />
@@ -157,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
+    <ClInclude Include="Day.h" />
     <ClInclude Include="Fraction.h" />
     <ClInclude Include="IntPair.h" />
     <ClInclude Include="Matrix.h" />

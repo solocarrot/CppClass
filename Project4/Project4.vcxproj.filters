@@ -66,6 +66,12 @@
     <ClCompile Include="nullTest.cpp">
       <Filter>소스 파일\과제\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="dDay.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="dDayMain.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
@@ -87,6 +93,9 @@
       <Filter>헤더 파일\과제</Filter>
     </ClInclude>
     <ClInclude Include="Money.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Day.h">
       <Filter>헤더 파일\과제</Filter>
     </ClInclude>
   </ItemGroup>
