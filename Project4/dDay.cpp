@@ -85,3 +85,45 @@ bool Day::isYoon()
 	else return false;
 }
 
+Day Day::changeDay(char enter[])
+{
+	if (enter[0] == 'y' || enter[0] == 'Y')
+	{
+		Day resultDay;
+		resultDay = (*this)--;
+		return resultDay;
+	}
+	else if (enter[0]  == 't' || enter[0] == 'T')
+	{
+		Day resultDay;
+		resultDay = (*this)++;
+		return resultDay;
+	}
+	else if (enter[0] == 'q' || enter[0] == 'Q')
+	{
+		cout << "quit" << endl;
+	}
+	else if (enter[0] - '0' >= 0 && enter[0] - '0' <= 9)
+	{
+		if (enter[9] != '/0')
+		{
+			cout << "error" << endl;
+		}
+		else
+		{
+			Day resultDay(char enter[]);
+			
+		}
+	}
+	else if (enter[0] == '+' || enter[0] == '-')
+	{
+
+	}
+}
+
+Day::Day(char enter[8])
+{
+	year = (enter[0] * 1000) + (enter[1] * 100) + (enter[2] + 10) + (enter[3]);
+	month = (enter[4] * 10) + enter[5];
+	day = enter[6] * 10 + enter[7];
+}

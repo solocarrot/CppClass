@@ -6,10 +6,21 @@ using namespace std;
 int main() 
 {
 	Day day;
-	cout << day;
-	Day day2;
-	day2 = day--;
-	cout << day2;
+	cout << day << endl;
+	
+	while (true)
+	{
+		char enter[9];
+		cin >> enter;
+		if (enter[0] == 'q') break;
+		else
+		{
+			day.changeDay(enter);
+			cout << day << endl;
+		}
+	}
+
+
 
 
 

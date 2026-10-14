@@ -31,17 +31,17 @@
 //
 //}
 
-#include <iostream>
-
-int main() {
-	int val1 = 8, val2 = 3;
-	int* pint1, * pint2;
-
-	double x = 1.7, * pDouble = &x; //p더블이가지는 값은 x의주소값임.
-
-	char c = 'a', * pChar = &c;
-
-	std::cout << 
-
-
-}
+//#include <iostream>
+//
+//int main() {
+//	int val1 = 8, val2 = 3;
+//	int* pint1, * pint2;
+//
+//	double x = 1.7, * pDouble = &x; //p더블이가지는 값은 x의주소값임.
+//
+//	char c = 'a', * pChar = &c;
+//
+//	std::cout << 
+//
+//
+//}

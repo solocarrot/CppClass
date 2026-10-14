@@ -13,7 +13,7 @@ private:
 
 public:
 	Day();
-	Day(int);
+	Day(char[8]);
 
 	int getYear() const;
 	int getDay() const;
@@ -25,6 +25,9 @@ public:
 
 	bool isYoon();
 
+	Day changeDay(char[]);
+
+		
 
 
 };
