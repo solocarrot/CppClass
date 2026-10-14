@@ -34,3 +34,12 @@ public:
 
 std::ostream& operator<<(std::ostream& os, const Day&);
 std::istream& operator>>(std::istream& is, Day&);
+
+class DDay
+{
+private:
+	int howMuch;
+public:
+	Day getResultDay();
+	void set(char[]); //char배열로 입력받아서 howMuch를 변경함
+};

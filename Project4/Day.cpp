@@ -61,6 +61,54 @@ void Day::setter()
 		else if (month == 4 || month == 6 || month == 9 || month == 11) day += 30;
 		else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) day += 31;
 	}
+	else if (day == 29)
+	{
+		if (month == 2 && isYoonyear == false)
+		{
+			month++;
+			day -= 28;
+		}
+	}
+	else if (day == 30)
+	{
+		if (month == 2 && isYoonyear == true)
+		{
+			month++;
+			day -= 29;
+		}
+	}
+	else if (day == 31)
+	{
+		if (month == 4 || month == 6 || month == 9 || month == 11)
+		{
+			month++;
+			day -= 30;
+		}
+	}
+	else if (day >= 32)
+	{
+		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+		{
+			month++;
+			day -= 31;
+		}
+
+	}
+	if (month <= 0)
+	{
+		year--;
+		month += 12;
+		day += 31;
+	}
+	else if (month >= 13)
+	{
+		year++;
+		month -= 12;
+	}
+
+
+
+
 }
 
 bool Day::isYoon()
@@ -100,20 +148,40 @@ void Day::changeDay(char enter[])
 		}
 		else
 		{
-			year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') + 10) + (enter[3] - '0');
+			year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') * 10) + (enter[3] - '0');
 			month = ((enter[4] - '0') * 10) + (enter[5] - '0');
-			day = (enter[6] - '0') * 10 + (enter[7] - '0');
+			day = ((enter[6] - '0') * 10) + (enter[7] - '0');
 		}
 	}
 	else if (enter[0] == '+' || enter[0] == '-')
 	{
-
+		
 	}
 }
 
-Day::Day(char enter[8])
-{
-	year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') + 10) + (enter[3] - '0');
-	month = ((enter[4] - '0') * 10) + (enter[5] - '0');
-	day = (enter[6]- '0') * 10 + (enter[7] - '0');
+//Day::Day(char enter[8])
+//{
+//	year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') + 10) + (enter[3] - '0');
+//	month = ((enter[4] - '0') * 10) + (enter[5] - '0');
+//	day = (enter[6]- '0') * 10 + (enter[7] - '0');
+//}
+
+void DDay::set(char enter[8])
+	{
+	howMuch = 0;
+	int i = 1;
+	while(enter[i] != '\n')
+	{
+		howMuch *= 10;
+		howMuch += enter[i];
+		i++;
+	}
+	if (enter[0] == '-')
+	{
+		howMuch *= -1;
+	}
+	else if (enter[0] == '+')
+	{
+		howMuch *= 1;
+	}
 }

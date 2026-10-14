@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="class.cpp" />
-    <ClCompile Include="dDay.cpp" />
+    <ClCompile Include="Day.cpp" />
     <ClCompile Include="dDayMain.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="Fraction.cpp" />

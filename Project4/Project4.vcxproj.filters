@@ -66,7 +66,7 @@
     <ClCompile Include="nullTest.cpp">
       <Filter>소스 파일\과제\cpp</Filter>
     </ClCompile>
-    <ClCompile Include="dDay.cpp">
+    <ClCompile Include="Day.cpp">
       <Filter>소스 파일\과제\cpp</Filter>
     </ClCompile>
     <ClCompile Include="dDayMain.cpp">

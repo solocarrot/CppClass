@@ -31,47 +31,47 @@
 //
 //}
 
-#include <iostream>
-
-int main() {
-	int val1 = 8, val2 = 3;
-	int* pint1, * pint2;
-
-	double x = 1.7, * pDouble = &x; //p더블이가지는 값은 x의주소값임.
-
-	char c = 'a', * pChar = &c;
-
-	pint1 = &val1;
-	std::cout << pint1 << " " << *pint1 << std::endl;
-	std::cout << &val1 << " " << val1 << std::endl;
-
-	int* pintArr = new int[20];
-
-	delete[] pintArr;
-
-	int* p1, * p2;
-
-	p1 = new int;
-	*p1 = 42;
-	p2 = p1;
-
-	std::cout << "*p1 ==" << *p1 << std::endl;
-	std::cout << "*p2 ==" << *p2 << std::endl;
-
-	*p2 = 53;
-	std::cout << "*p1 ==" << *p1 << std::endl;
-	std::cout << "*p2 ==" << *p2 << std::endl;
-
-	double* pD;
-	pD = new double;
-
-	delete pD;
-
-	int* p;
-	p = new int[5];
-
-	delete[] p;
-
-
-
-}
+//#include <iostream>
+//
+//int main() {
+//	int val1 = 8, val2 = 3;
+//	int* pint1, * pint2;
+//
+//	double x = 1.7, * pDouble = &x; //p더블이가지는 값은 x의주소값임.
+//
+//	char c = 'a', * pChar = &c;
+//
+//	pint1 = &val1;
+//	std::cout << pint1 << " " << *pint1 << std::endl;
+//	std::cout << &val1 << " " << val1 << std::endl;
+//
+//	int* pintArr = new int[20];
+//
+//	delete[] pintArr;
+//
+//	int* p1, * p2;
+//
+//	p1 = new int;
+//	*p1 = 42;
+//	p2 = p1;
+//
+//	std::cout << "*p1 ==" << *p1 << std::endl;
+//	std::cout << "*p2 ==" << *p2 << std::endl;
+//
+//	*p2 = 53;
+//	std::cout << "*p1 ==" << *p1 << std::endl;
+//	std::cout << "*p2 ==" << *p2 << std::endl;
+//
+//	double* pD;
+//	pD = new double;
+//
+//	delete pD;
+//
+//	int* p;
+//	p = new int[5];
+//
+//	delete[] p;
+//
+//
+//
+//}
