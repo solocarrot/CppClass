@@ -166,14 +166,14 @@ void Day::changeDay(char enter[])
 //	day = (enter[6]- '0') * 10 + (enter[7] - '0');
 //}
 
-void DDay::set(char enter[8])
+void DDay::setDDay(char enter[8])
 	{
 	howMuch = 0;
 	int i = 1;
-	while(enter[i] != '\n')
+	while(enter[i] != '\0')
 	{
 		howMuch *= 10;
-		howMuch += enter[i];
+		howMuch += (enter[i] - '0');
 		i++;
 	}
 	if (enter[0] == '-')

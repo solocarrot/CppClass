@@ -39,7 +39,8 @@ class DDay
 {
 private:
 	int howMuch;
+	Day nowDay;
 public:
 	Day getResultDay();
-	void set(char[]); //char배열로 입력받아서 howMuch를 변경함
+	void setDDay(char[]); //char배열로 입력받아서 howMuch를 변경함
 };
