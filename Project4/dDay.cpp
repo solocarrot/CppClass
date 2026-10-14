@@ -94,14 +94,15 @@ void Day::changeDay(char enter[])
 	}
 	else if (enter[0] - '0' >= 0 && enter[0] - '0' <= 9)
 	{
-		if (enter[9] != '/0')
+		if (enter[8] != '\0')
 		{
 			cout << "error" << endl;
 		}
 		else
 		{
-			Day resultDay(char enter[]);
-			
+			year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') + 10) + (enter[3] - '0');
+			month = ((enter[4] - '0') * 10) + (enter[5] - '0');
+			day = (enter[6] - '0') * 10 + (enter[7] - '0');
 		}
 	}
 	else if (enter[0] == '+' || enter[0] == '-')
@@ -112,7 +113,7 @@ void Day::changeDay(char enter[])
 
 Day::Day(char enter[8])
 {
-	year = (enter[0] * 1000) + (enter[1] * 100) + (enter[2] + 10) + (enter[3]);
-	month = (enter[4] * 10) + enter[5];
-	day = enter[6] * 10 + enter[7];
+	year = ((enter[0] - '0') * 1000) + ((enter[1] - '0') * 100) + ((enter[2] - '0') + 10) + (enter[3] - '0');
+	month = ((enter[4] - '0') * 10) + (enter[5] - '0');
+	day = (enter[6]- '0') * 10 + (enter[7] - '0');
 }
