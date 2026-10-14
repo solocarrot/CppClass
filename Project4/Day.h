@@ -20,12 +20,12 @@ public:
 	int getMonth() const;
 
 	void setter();
-	Day operator++(int);
-	Day operator--(int);
+	void operator++(int);
+	void operator--(int);
 
 	bool isYoon();
 
-	Day changeDay(char[]);
+	void changeDay(char[]);
 
 		
 

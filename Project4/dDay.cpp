@@ -11,24 +11,16 @@ Day::Day()
 
 }
 
-Day Day::operator++(int)
+void Day::operator++(int)
 {
-	Day resultDay;
-	resultDay.year = year;
-	resultDay.month = month;
-	resultDay.day = day + 1;
-	resultDay.setter();
-	return resultDay;
+	day +=1;
+	setter();
 }
 
-Day Day::operator--(int)
+void Day::operator--(int)
 {
-	Day resultDay;
-	resultDay.year = year;
-	resultDay.month = month;
-	resultDay.day = day - 1;
-	resultDay.setter();
-	return resultDay;
+	day -=1;
+	setter();
 }
 
 int Day::getDay() const
@@ -85,19 +77,16 @@ bool Day::isYoon()
 	else return false;
 }
 
-Day Day::changeDay(char enter[])
+void Day::changeDay(char enter[])
 {
 	if (enter[0] == 'y' || enter[0] == 'Y')
 	{
-		Day resultDay;
-		resultDay = (*this)--;
-		return resultDay;
+		(*this)--;
 	}
 	else if (enter[0]  == 't' || enter[0] == 'T')
 	{
-		Day resultDay;
-		resultDay = (*this)++;
-		return resultDay;
+		
+		(*this)++;
 	}
 	else if (enter[0] == 'q' || enter[0] == 'Q')
 	{
