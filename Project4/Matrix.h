@@ -15,8 +15,12 @@ public:
 	void set(int,int,int);
 	int get(int,int) const;
 
-	int getLength(int);
-	int getMaxLength();
+	int getLength(int) const;
+	int getMaxLength() const;
+
+	Matrix operator!() const;
+	Matrix operator+(const Matrix) const;
+	Matrix operator*(const Matrix) const;
 
 };
 
