@@ -23,14 +23,14 @@ std::ostream& operator<<(std::ostream& os, const Matrix& matrix)
 		os << "|";
 		for (int j = 0; j < SIZE; j++)
 		{
-			int nowNum = matrix.get(i, j);
-
 			os << " ";
+
+			int nowNum = matrix.get(i, j);
 			for (int k = 0; k < (maxLength - matrix.getLength(nowNum)); k++)
 			{
 				os << " ";
 			}
-			os << matrix.get(i, j);
+			os << nowNum;
 		}
 		os << " " << "|" << endl;
 	}
@@ -95,4 +95,49 @@ std::istream& operator>>(std::istream& is, Matrix& matrix)
 		}
 	}
 	return is;
+}
+
+Matrix Matrix::operator!() const
+{
+	Matrix resultMatrix;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			resultMatrix.arr[i][j] = arr[j][i];
+		}
+	}
+	return resultMatrix;
+}
+
+Matrix Matrix::operator+(const Matrix& matrix) const
+{
+	Matrix resultMatrix;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			resultMatrix.arr[i][j] = arr[i][j] + matrix.arr[i][j];
+		}
+	}
+	return resultMatrix;
+}
+
+Matrix Matrix::operator*(const Matrix& matrix) const
+{
+	Matrix resultMatrix;
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			int sum = 0;
+			for (int k = 0; k < SIZE; k++)
+			{
+				sum += (arr[i][k] * matrix.arr[k][j]);
+			}
+			resultMatrix.arr[i][j] = sum;
+
+		}
+	}
+	return resultMatrix;
 }
