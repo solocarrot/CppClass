@@ -1,5 +1,6 @@
-//#include <iostream>
-//using namespace std;
+#include <iostream>
+
+using namespace std;
 //
 //class TestClass{
 //public :
@@ -75,3 +76,36 @@
 //
 //
 //}
+
+//typedef int* intPointer;
+//void sneaky(intPointer temp);
+//
+//int main()
+//{
+//	intPointer p;
+//
+//	p = new int;
+//	*p = 77;
+//
+//	cout << "before call to fuction*p ==" << *p << endl;
+//
+//	sneaky(p);
+//
+//	cout << "Afetr == " << *p << endl;
+//
+//	return 0;
+//}
+//
+//void sneaky(intPointer temp)
+//{
+//	*temp = 99;
+//	cout << "insdie fuction *temp == " << temp << endl;
+//}
+
+int main()
+{
+	const int MAX = 10;
+	double* dPtr = new double[MAX];
+	printf("%p %p", dPtr, dPtr + 1);
+	return 0;
+}
