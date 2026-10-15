@@ -6,11 +6,15 @@ using namespace std;
 std::istream& operator>>(std::istream& is, CharArray& charArr)
 {
 	char c;
-	while (c != '\n')
+	while (true)
 	{
 		is >> c;
-		charArr.set(c, charArr.getIndex());
-		charArr.upIndex();
+		if (c == '.') break;
+		else
+		{
+			charArr.set(c, charArr.getIndex());
+			charArr.upIndex();
+		}
 	}
 	return is;	
 }
@@ -26,6 +30,7 @@ std::ostream& operator<<(std::ostream& os, CharArray& charArr)
 	{
 		char nowPrint;
 		nowPrint = charArr.get(i);
+		os << nowPrint;
 	}
 	return os;
 }
