@@ -151,6 +151,8 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="MoneyMain.cpp" />
     <ClCompile Include="nullTest.cpp" />
+    <ClCompile Include="StringApp.cpp" />
+    <ClCompile Include="StringAppMain.cpp" />
     <ClCompile Include="질문.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +166,7 @@
     <ClInclude Include="IntPair.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="Money.h" />
+    <ClInclude Include="StringApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
