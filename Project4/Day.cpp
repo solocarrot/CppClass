@@ -166,22 +166,10 @@ void Day::changeDay(char enter[])
 //	day = (enter[6]- '0') * 10 + (enter[7] - '0');
 //}
 
-void DDay::setDDay(char enter[8])
-	{
-	howMuch = 0;
-	int i = 1;
-	while(enter[i] != '\0')
-	{
-		howMuch *= 10;
-		howMuch += (enter[i] - '0');
-		i++;
-	}
-	if (enter[0] == '-')
-	{
-		howMuch *= -1;
-	}
-	else if (enter[0] == '+')
-	{
-		howMuch *= 1;
-	}
+
+istream& operator>>(istream& is, Day& day)
+{
+	char charArr[9];
+	is >> charArr;
+	
 }

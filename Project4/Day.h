@@ -3,22 +3,25 @@
 
 using namespace std;
 
+const int SIZE = 9;
+
 class Day
 {
 private:
 	int year;
 	int month;
 	int day;
-	
 
+	char charArr[SIZE];
+	
 public:
 	Day();
-	Day(char[8]);
 
 	int getYear() const;
 	int getDay() const;
 	int getMonth() const;
 
+	void set(char[9]);
 	void setter();
 	void operator++(int);
 	void operator--(int);
@@ -41,6 +44,6 @@ private:
 	int howMuch;
 	Day nowDay;
 public:
-	Day getResultDay();
-	void setDDay(char[]); //char배열로 입력받아서 howMuch를 변경함
+	DDay(Day day) : nowDay(day) {}
+	void set(int);
 };

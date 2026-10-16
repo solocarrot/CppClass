@@ -1,17 +1,18 @@
 //#pragma once
 //#include <iostream>
 //
-//
+//const int SIZE = 128;
 //
 //class CharArray
 //{
 //private:
-//	char charArray[128];
+//	char charArray[SIZE];
 //	int index = 0;
 //public:
 //	void set(char, int);
 //	int getIndex();
 //	void upIndex();
+//	char getElement(int);
 //
 //	char get(int) const;
 //
@@ -23,7 +24,8 @@
 //class lowerCase
 //{
 //private:
-//	CharArray charArr;
+//	CharArray& charArr;
 //public:
-//	lowerCase();
+//	lowerCase(CharArray& charArray) : charArr(charArray) {}
+//	void changeToLower();
 //};

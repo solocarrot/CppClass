@@ -37,10 +37,22 @@
 //
 //void CharArray::upIndex()
 //{
-//	index++;
+//	if (index < 128) index++;
+//	else cout << "error" << endl;
 //}
 //
-////CharArray lowerCase::changeToLower() const
-////{
-////	
-////}
+//char CharArray::getElement(int i)
+//{
+//	return charArray[i];
+//}
+//
+//void lowerCase::changeToLower()
+//{
+//	for (int i = 0; i < charArr.getIndex(); i++)
+//	{
+//		if (charArr.getElement(i) - 'A' >= 0 && charArr.getElement(i) - 'Z' <= 23)
+//		{
+//			
+//		}
+//	}
+//}
