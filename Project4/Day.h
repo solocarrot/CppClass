@@ -28,7 +28,7 @@ public:
 
 	bool isYoon();
 
-	void changeDay(char[]);
+	void checkArrFirst(char[]);
 
 		
 

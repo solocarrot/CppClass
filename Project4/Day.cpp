@@ -125,7 +125,7 @@ bool Day::isYoon()
 	else return false;
 }
 
-void Day::changeDay(char enter[])
+void Day::checkArrFirst(char enter[])
 {
 	if (enter[0] == 'y' || enter[0] == 'Y')
 	{
@@ -155,7 +155,7 @@ void Day::changeDay(char enter[])
 	}
 	else if (enter[0] == '+' || enter[0] == '-')
 	{
-		
+		DDay::getDay();
 	}
 }
 
@@ -171,5 +171,5 @@ istream& operator>>(istream& is, Day& day)
 {
 	char charArr[9];
 	is >> charArr;
-	
+	day.set(charArr);
 }
