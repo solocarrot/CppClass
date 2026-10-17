@@ -139,12 +139,20 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="Day.cpp" />
+    <ClCompile Include="dDayMain.cpp" />
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="FractionMain2.cpp" />
     <ClCompile Include="IntPair.cpp" />
     <ClCompile Include="MatrixOverloading.cpp" />
     <ClCompile Include="MatrixOverloadingMain.cpp" />
+    <ClCompile Include="Money.cpp" />
+    <ClCompile Include="MoneyMain.cpp" />
+    <ClCompile Include="nullTest.cpp" />
+    <ClCompile Include="StringApp.cpp" />
+    <ClCompile Include="StringAppMain.cpp" />
     <ClCompile Include="질문.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,9 +161,12 @@
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="CharPair.h" />
+    <ClInclude Include="Day.h" />
     <ClInclude Include="Fraction.h" />
     <ClInclude Include="IntPair.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Money.h" />
+    <ClInclude Include="StringApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

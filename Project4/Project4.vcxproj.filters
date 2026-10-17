@@ -45,6 +45,39 @@
     <ClCompile Include="Fraction.cpp">
       <Filter>소스 파일\과제\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="class.cpp">
+      <Filter>소스 파일\수업</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixOverloadingMain.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixOverloading.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="질문.cpp">
+      <Filter>소스 파일\수업</Filter>
+    </ClCompile>
+    <ClCompile Include="Money.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyMain.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
+    <ClCompile Include="nullTest.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Day.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="dDayMain.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
+    <ClCompile Include="StringAppMain.cpp">
+      <Filter>소스 파일\과제\main</Filter>
+    </ClCompile>
+    <ClCompile Include="StringApp.cpp">
+      <Filter>소스 파일\과제\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="review.txt" />
@@ -60,6 +93,18 @@
       <Filter>헤더 파일\수업</Filter>
     </ClInclude>
     <ClInclude Include="Fraction.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Money.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="Day.h">
+      <Filter>헤더 파일\과제</Filter>
+    </ClInclude>
+    <ClInclude Include="StringApp.h">
       <Filter>헤더 파일\과제</Filter>
     </ClInclude>
   </ItemGroup>
