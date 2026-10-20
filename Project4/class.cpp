@@ -102,10 +102,26 @@ using namespace std;
 //	cout << "insdie fuction *temp == " << temp << endl;
 //}
 
-int main()
-{
-	const int MAX = 10;
-	double* dPtr = new double[MAX];
-	printf("%p %p", dPtr, dPtr + 1);
-	return 0;
-}
+//int main()
+//{
+//	const int MAX = 10;
+//	double* dPtr = new double[MAX];
+//	printf("%p %p\n", dPtr, dPtr + 1);
+//
+//	int* iPtr = new int[MAX];
+//	for (int i = 0; i < MAX; i++)
+//	{
+//		iPtr[i] = 100 + i;
+//	}
+//	printf("%p %p\n", iPtr, iPtr + 1);
+//	printf("%d %d\n", *iPtr, *(iPtr + 1));
+//
+//	int* tepIPtr = &iPtr[5];
+//	for (int i = -5; i < 5; i++)
+//	{
+//		cout << tepIPtr[i] << " ";
+//	}
+//
+//	return 0;
+//
+//}
