@@ -70,3 +70,61 @@ CharArray CharArray::chagneToLower() const
 	}
 	return resultArray;
 }
+
+std::ostream& operator<<(std::ostream& os, const LowerCase& lower)
+{
+	for (int i = 0; i < 26; i++)
+	{
+		int nowNum = lower.getInt(i);
+		if (nowNum != 0)
+		{
+			os << "[" << char(i + 'a') << "==" << nowNum << "] ";
+		}
+		else continue;
+	}
+	return os;
+}
+
+void LowerCase::countLower()
+{
+	for (int i = 0; i < lowerArray.getIndex(); i++)
+	{
+		if (lowerArray.getElement(i) >= 'a' && lowerArray.getElement(i) <= 'z')
+		{
+			intArray[lowerArray.getElement(i) - 'a']++;
+		}
+		else continue;
+	}
+}
+
+int LowerCase::getInt(int index) const
+{
+	return intArray[index];
+}
+
+CharArray CharArray::moveToGap(int gap) const
+{
+	CharArray resultArr;
+	for (int i = 0; i < getIndex(); i++)
+	{
+		if ((getElement(i) >= 'A' && getElement(i) <= 'Z') || (getElement(i) >= 'a' && getElement(i) <= 'z'))
+		{
+			resultArr.set(char(getElement(i) + gap), i);
+			resultArr.upIndex();
+		}
+		else if (getElement(i) >= '0' && getElement(i) <= '9')
+		{
+			int num;
+			num = getElement(i) - '0';
+			while(getElement(i+1) >= '0' && getElement(i+1) <= '9')
+			{
+				i++;
+				num *= 10;
+				num += getElement(i) - '0';
+			}
+
+		}
+		else continue;
+	}
+	return resultArr;
+}

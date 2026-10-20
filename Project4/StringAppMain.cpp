@@ -7,9 +7,16 @@ int main()
 {
 	CharArray arr;
 	cin >> arr;
+	int gap;
+	cin >> gap;
+
 	cout << endl;
 
-	cout << arr;
+	cout << arr << endl;
 	CharArray lowerArr = arr.chagneToLower();
-	cout << lowerArr;
+	cout << lowerArr << endl;
+
+	LowerCase lower(arr.chagneToLower());
+	lower.countLower();
+	cout << lower;
 }
